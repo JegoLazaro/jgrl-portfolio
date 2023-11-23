@@ -49,7 +49,7 @@ const SkillCards = () => {
   return (
     <div>
       <div>
-        <div className={`${styles.section} lg:-mt-72 md:-mt-44 sm:-mt-22`}>
+        <div className={`${styles.section} lg:-mt-28 md:-mt-20 sm:-mt-12`}>
           <div className={`${styles.subSection} flex-col text-center`}>
             <div className={styles.flexWrap}>
               {skillsData.map((skill, index) => (

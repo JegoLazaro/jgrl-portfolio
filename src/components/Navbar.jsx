@@ -56,7 +56,7 @@ export default function Navbar() {
                 to={item.path}
                 spy={true}
                 smooth={true}
-                offset={55} // Adjust the offset as needed
+                offset={25} // Adjust the offset as needed
                 duration={500}
                 className="text-sm font-semibold leading-6 text-gray-900 cursor-pointer"
               >
