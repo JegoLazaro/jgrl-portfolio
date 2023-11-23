@@ -1,19 +1,23 @@
-import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import HeroSection from "./homeComponents/HeroSection";
+import { useState } from "react";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import assets from "../assets";
 
 const navigation = [
-  { name: "Home", href: "/" },
-  { name: "Skills", href: "#" },
-  { name: "Projects", href: "#" },
-  { name: "About Me", href: "#" },
-  { name: "Contact Me", href: "#" }
+  { name: "Home", path: "home" },
+  { name: "Skills", path: "skills" },
+  { name: "Projects", path: "projects" },
+  { name: "About Me", path: "about" },
+  { name: "Contact Me", path: "contact" }
 ];
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
 
   return (
     <div className="bg-white ">
@@ -23,14 +27,17 @@ export default function Navbar() {
           aria-label="Global"
         >
           <div className="flex lg:flex-1 flex-row">
-            <a href="#" className="-m-1.5 p-1.5 ">
-              {/* <span className="sr-only">Your Company</span> */}
+            <ScrollLink
+              to="home"
+              className="-m-1.5 p-1.5 cursor-pointer"
+              onClick={scrollToTop}
+            >
               <img
                 className="h-8 w-auto"
                 src={assets.Logo_name}
                 alt=""
               />
-            </a>
+            </ScrollLink>
           </div>
           <div className="flex lg:hidden">
             <button
@@ -44,13 +51,17 @@ export default function Navbar() {
           </div>
           <div className="hidden  lg:flex lg:gap-x-12">
             {navigation.map((item) => (
-              <a
+              <ScrollLink
                 key={item.name}
-                href={item.href}
-                className="text-sm font-semibold leading-6 text-gray-900"
+                to={item.path}
+                spy={true}
+                smooth={true}
+                offset={-70} // Adjust the offset as needed
+                duration={500}
+                className="text-sm font-semibold leading-6 text-gray-900 cursor-pointer"
               >
                 {item.name}
-              </a>
+              </ScrollLink>
             ))}
           </div>
         </nav>
@@ -58,19 +69,25 @@ export default function Navbar() {
           as="div"
           className="lg:hidden"
           open={mobileMenuOpen}
-          onClose={setMobileMenuOpen}
+          onClose={() => setMobileMenuOpen(false)}
         >
           <div className="fixed inset-0 z-50" />
           <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
-              <a href="#" className="-m-1.5 p-1.5">
-                <span className="sr-only">Your Company</span>
+              <ScrollLink
+                to="home"
+                className="-m-1.5 p-1.5 cursor-pointer"
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  scrollToTop();
+                }}
+              >
                 <img
                   className="h-8 w-auto"
                   src={assets.Logo}
                   alt=""
                 />
-              </a>
+              </ScrollLink>
               <button
                 type="button"
                 className="-m-2.5 rounded-md p-2.5 text-gray-700"
@@ -84,13 +101,18 @@ export default function Navbar() {
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
                   {navigation.map((item) => (
-                    <a
+                    <ScrollLink
                       key={item.name}
-                      href={item.href}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                      to={item.path}
+                      spy={true}
+                      smooth={true}
+                      offset={-70} // Adjust the offset as needed
+                      duration={500}
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 cursor-pointer"
+                      onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.name}
-                    </a>
+                    </ScrollLink>
                   ))}
                 </div>
               </div>
@@ -98,8 +120,6 @@ export default function Navbar() {
           </Dialog.Panel>
         </Dialog>
       </header>
-
-      
     </div>
   );
 }
