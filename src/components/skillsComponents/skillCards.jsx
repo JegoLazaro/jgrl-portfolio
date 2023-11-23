@@ -38,6 +38,11 @@ const SkillCards = () => {
     { iconUrl: assets.python, iconText: "Python", link: "" },
     { iconUrl: assets.react_bootstrap, iconText: "React-Bootstrap", link: "" },
     { iconUrl: assets.bootstrap, iconText: "Bootstrap", link: "" },
+    { iconUrl: assets.C_logo, iconText: "C Programming", link: "" },
+    { iconUrl: assets.android_studio, iconText: "Java Anroid Studio", link: "" },
+    { iconUrl: assets.java, iconText: "Java", link: "" },
+    { iconUrl: assets.mongodb, iconText: "MongoDB", link: "" },
+    
     // Add more objects as needed
   ];
 

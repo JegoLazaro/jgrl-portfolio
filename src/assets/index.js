@@ -20,6 +20,10 @@ import react_bootstrap from "./skillLogos/react_bootstrap.png"
 import tailwind from "./skillLogos/tailwind.png"
 import react_logo from "./skillLogos/react_logo.png"
 import git from "./skillLogos/git.png"
+import android_studio from "./skillLogos/android_studio.png"
+import C_logo from "./skillLogos/C_logo.png"
+import java from "./skillLogos/java.png"
+import mongodb from "./skillLogos/mongodb.png"
 
 export default {
     Logo,
@@ -43,5 +47,9 @@ python,
 react_bootstrap,
 tailwind,
 react_logo,
-git
+git,
+android_studio,
+C_logo,
+java,
+mongodb,
 }
