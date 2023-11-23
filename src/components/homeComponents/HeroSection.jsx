@@ -1,7 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import assets from "../../assets";
 
 const HeroSection = () => {
+    const [hover,setHover] = useState(false);
+
   return (
     <div id="home">
       <div className="relative isolate px-6 lg:px-8">
@@ -24,12 +26,17 @@ const HeroSection = () => {
             }}
           />
         </div>
-        <div className="flex flex-col lg:flex-row items-center justify-start mx-auto max-w-5xl py-32 sm:py-36 lg:py-40">
+        <div className="flex flex-col lg:flex-row items-center justify-start mx-auto max-w-5xl py-32 sm:py-36 lg:py-28">
           <div className="lg:w-1/2 pr-8">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
               Hello, My name is Jego Lazaro!
             </h1>
-            <h1 className="text-3xl pt-3 font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <h1 className="text-3xl pt-3 font-bold tracking-tight  sm:text-4xl"
+                style={{
+                    color: "#0071A1",
+                    textShadow: "2px 2px 2px #fff"
+                }}
+            >
               I am a Frontend Developer
             </h1>
             <p className="mt-6 text-md leading-8 text-gray-600">
@@ -48,10 +55,18 @@ const HeroSection = () => {
                 stunning and user-friendly interfaces.
               </p>
             </p>
-            <div className="mt-10 flex items-start justify-start gap-x-6">
+            <div className="mt-10 flex items-start justify-start gap-x-6"
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+                
+            >
               <a
                 href="#"
-                className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="rounded-md  px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm  "
+                style={{
+                    backgroundColor: hover ? "#4E93B0" :"#0071A1",
+                    color: "#fff" 
+                }}
               >
                 Get to Know Me
               </a>

@@ -9,14 +9,14 @@ import Projects from "./components/Projects";
 
 const App = () => {
   return (
-    <>
+    <div className=" ">
       <Navbar />
       <HeroSection />
       <Skills />
       <Projects />
       <AboutMe />
       <Contact />
-    </>
+    </div>
   );
 };
 
