@@ -56,16 +56,17 @@ const HeroSection = () => {
               </p>
             </p>
             <div className="mt-10 flex items-start justify-start gap-x-6"
-                onMouseEnter={() => setHover(true)}
-                onMouseLeave={() => setHover(false)}
+                
                 
             >
               <a
                 href="#"
                 className="rounded-md  px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm  "
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
                 style={{
                     backgroundColor: hover ? "#4E93B0" :"#0071A1",
-                    color: "#fff" 
+                    color: !hover ? "#fff" :"#000" 
                 }}
               >
                 Get to Know Me
