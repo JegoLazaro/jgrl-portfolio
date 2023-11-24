@@ -49,7 +49,7 @@ export default function Navbar() {
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
-          <div className="hidden  lg:flex lg:gap-x-12">
+          <div className="hidden lg:flex lg:gap-x-2 ">
             {navigation.map((item) => (
               <ScrollLink
                 key={item.name}
@@ -58,7 +58,7 @@ export default function Navbar() {
                 smooth={true}
                 offset={25} // Adjust the offset as needed
                 duration={500}
-                className="text-sm font-semibold leading-6 text-gray-900 cursor-pointer"
+                className="text-md font-semibold text-cyan-800 hover:bg-cyan-700 rounded-xl hover:text-white px-10 py-2 cursor-pointer"
               >
                 {item.name}
               </ScrollLink>
@@ -84,7 +84,7 @@ export default function Navbar() {
               >
                 <img
                   className="h-8 w-auto"
-                  src={assets.Logo}
+                  src={assets.Logo_name}
                   alt=""
                 />
               </ScrollLink>
@@ -108,7 +108,7 @@ export default function Navbar() {
                       smooth={true}
                       offset={-70} // Adjust the offset as needed
                       duration={500}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 cursor-pointer"
+                      className="-mx-3 text-center block rounded-lg px-3 py-1 text-lg font-semibold leading-10 text-cyan-800 hover:bg-cyan-800 hover:text-white cursor-pointer"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.name}

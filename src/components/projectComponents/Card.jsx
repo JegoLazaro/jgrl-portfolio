@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import assets from "../../assets";
+import { XMarkIcon } from "@heroicons/react/24/outline";
 
 const Card = ({
   title,
@@ -132,7 +133,7 @@ const Card = ({
               className="text-blue-500 hover:underline mt-4"
               onClick={handleIOSModal}
             >
-              Close
+              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
         </div>
@@ -145,7 +146,7 @@ const Card = ({
               className="text-blue-500 hover:underline mt-4"
               onClick={handleAndroidModal}
             >
-              Close
+              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
         </div>
