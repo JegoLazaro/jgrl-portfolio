@@ -7,7 +7,9 @@ export const FeatureCard = ({ iconUrl, iconText, shadow_Color }) => {
 
   return (
     <div
-      className={`${styles.featureCard}  `}
+      className={`${styles.featureCard}  overflow-hidden transition-transform transform ${
+        hover ? "scale-110" : ""
+      }`}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       style={{
