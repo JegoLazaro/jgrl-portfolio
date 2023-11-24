@@ -1,5 +1,6 @@
 import React from 'react'
 import HeaderComp from './headerComp'
+import Forms from './contactMeComonents/forms'
 
 const ContactMe = () => {
 
@@ -10,6 +11,7 @@ const ContactMe = () => {
         description={"Contact Me Form and Social Media Cards Here"}
         reverse
       />
+      <Forms />
     </div>
   )
 }

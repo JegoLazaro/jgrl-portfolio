@@ -1,5 +1,6 @@
 import React from "react";
 import HeaderComp from './headerComp'
+import ProjectCards from "./projectComponents/projectsCard";
 
 
 const Projects = () => {
@@ -26,6 +27,7 @@ const Projects = () => {
   return (
     <div id="projects">
       <HeaderComp title={"Projects"} description={"React JS and React Native Projects Here"} reverse/>
+      <ProjectCards />
     </div>
   );
 };

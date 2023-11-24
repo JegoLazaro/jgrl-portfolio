@@ -24,8 +24,8 @@ const styles = {
     btnBlack:
       "bg-black flex items-center py-2 px-4 rounded-md mt-2 w-fit cursor-pointer",
   
-    section: "flex justify-center items-center p-16 sm:p-8",
-    subSection: "flex items-center w-full minmd:w-3/4",
+    section: "flex justify-center items-center p-0 sm:p-8",
+    subSection: "flex items-center w-full minmd:w-3/4 ",
     descDiv: "flex-1 w-full flex justify-start flex-col md:mb-10 ",
   
     flexCenter: "flex justify-center items-center",
@@ -35,11 +35,11 @@ const styles = {
     sectionImg: "w-full h-full minmd:w-11/12 minmd:h-11/12 object-contain",
     btnIcon: "w-5 h-5 minmd:w-10 minmd:h-10 object-contain",
   
-    featureImg: "w-20 h-20 minlg:w-40 minlg:h-40 object-contain mb-1",
+    featureImg: " w-16 h-16 minlg:w-32 minlg:h-32 object-contain ",
     featureText:
       "font-semibold font-IBMPlex text-base minlg:text-3xl text-tertiary",
     featureCard:
-      "bg-white m-10 p-6 rounded-md flex justify-around items-center flex-col hover:shadow-lg cursor-pointer w-40 h-40 minlg:w-80 minlg:h-80",
+      "bg-white m-6 p-2 rounded-md flex justify-around items-center flex-col cursor-pointer w-40 h-40 minlg:w-80 minlg:h-80",
   };
   
   export default styles;

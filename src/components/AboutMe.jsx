@@ -1,5 +1,6 @@
 import React from 'react'
 import HeaderComp from './headerComp'
+import AboutMeContainer from './aboutMeComponents/aboutMeContainer'
 
 const AboutMe = () => {
 
@@ -9,6 +10,7 @@ const AboutMe = () => {
         title={"About Me"}
         description={"About Me Description Here"}
       />
+      <AboutMeContainer />
     </div>
   )
 }
