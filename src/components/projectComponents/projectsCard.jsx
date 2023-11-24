@@ -10,6 +10,18 @@ const WebsiteProjects = () => {
       demoLink: "https://laparrillademnl.netlify.app/",
       sourceCodeLink: "https://github.com/JegoLazaro/la-parrilla",
     },
+    {
+      title: "NFT Mini Marketplace Showcase Website",
+      imageSrc: assets.nft_showcase,
+      demoLink: "https://nft-app-showcase-jgrl.netlify.app",
+      sourceCodeLink: "https://github.com/JegoLazaro/nft-showcase-website-react-vite",
+    },
+    {
+      title: "Converge GoFiber Website Clone",
+      imageSrc: assets.gofiber,
+      demoLink: "https://cnvrg-frontend-ui-jgrl.netlify.app",
+      sourceCodeLink: "https://github.com/JegoLazaro/gofiber",
+    },
     // Add more projects as needed
   ];
 
