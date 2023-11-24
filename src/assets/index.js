@@ -5,6 +5,11 @@ import pic1 from "./pic1.png";
 import pic2 from "./pic2.png";
 import pic3 from "./pic3.png";
 import Logo_name from "./logo_name.png";
+
+import gofiber from "./gofiber.png"
+import la_parrilla from "./la_parrilla.png"
+import nft_showcase from "./nft_showcase.png"
+
 import expo02 from "./skillLogos/expo02.png";
 import javascript from "./skillLogos/javascript.png";
 import react from "./skillLogos/react-native-logo.png";
@@ -52,4 +57,7 @@ export default {
   C_logo,
   java,
   mui,
+  gofiber,
+la_parrilla,
+nft_showcase
 };
