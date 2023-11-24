@@ -4,7 +4,7 @@ import SkillCards from './skillsComponents/skillCards'
 const HeaderComp = ({title, description, reverse}) => {
 
   return (
-    <div id='skills' className={`${reverse? " bg-cyan-700" : "bg-white" } py-20 sm:py-20 -mr-7`}>
+    <div id='skills' className={`${reverse? " bg-cyan-700" : "bg-white" } py-20 sm:py-20 `}>
     <div className={`mx-auto max-w-7xl px-6 lg:px-8 flex ${reverse? " justify-center" : "justify-start" }`}>
       <div className="max-w-2xl">
         <h2 className={`text-3xl font-bold tracking-tight sm:text-4xl flex ${reverse? "justify-center" : "justify-start" } `}
