@@ -43,6 +43,12 @@ import mui from "./skillLogos/mui.png";
 
 import cv from "./LAZARO_RESUME.pdf"
 
+import figma_cloud from "./skillLogos/figma_cloud.png"
+import nodejs_cloud from "./skillLogos/nodejs_cloud.png"
+import react_cloud from "./skillLogos/react_cloud.png"
+import tailwindcss_cloud from "./skillLogos/tailwindcss_cloud.png"
+import git_cloud from "./skillLogos/git_cloud.png"
+
 export default {
   Logo,
   mockup1,
@@ -82,5 +88,10 @@ movie_ios_qr,
 movie_android_qr,
 crytpo_ios_qr,
 crypto_android_qr,
-cv
+cv,
+nodejs_cloud,
+react_cloud,
+tailwindcss_cloud,
+figma_cloud,
+git_cloud
 };

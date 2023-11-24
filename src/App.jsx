@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Skills from "./components/Skills";
 import HeroSection from "./components/homeComponents/HeroSection";
 import Projects from "./components/Projects";
+import LogoCloud from "./components/LogoCloud";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <Projects />
       <AboutMe />
       <Contact />
+      <LogoCloud />
     </div>
   );
 };

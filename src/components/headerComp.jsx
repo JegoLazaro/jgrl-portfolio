@@ -14,7 +14,7 @@ const HeaderComp = ({title, description, reverse}) => {
         >
           {title}
         </h2>
-        <p className="mt-2 mb-4 text-justify text-lg leading-8 text-gray-400">
+        <p className="mt-2 mb-4 text-justify text-lg leading-8 text-slate-600">
           {description}
         </p>
       </div>

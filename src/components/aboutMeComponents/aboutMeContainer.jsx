@@ -38,13 +38,13 @@ const AboutMeContainer = () => {
           </div>
           <div className="lg:w-1/2 pl-12">
             <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Hello! I'm Jego Lazaro!
+            Hello, I'm Jego Lazaro!
             </h1>
             <h1
               className="text-xl pt-3 text-justify font-semibold tracking-wide sm:text-2xl"
               style={{
                 color: "#0071A1",
-                // textShadow: "2px 2px 2px #fff",
+                 textShadow: "1px 2px 3px #fff",
               }}
             >
               A dedicated React JS and React Native developer. I earned my BS in Computer Science from DLSU-Manila, specializing in Software Technology. Fueled by a love for innovation and creativity, I thrive on transforming ideas into seamless digital experiences. Let's embark on a journey to bring your projects to life!
