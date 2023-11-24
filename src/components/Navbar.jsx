@@ -56,7 +56,7 @@ export default function Navbar() {
                 to={item.path}
                 spy={true}
                 smooth={true}
-                offset={25} // Adjust the offset as needed
+                offset={10} 
                 duration={500}
                 className="text-md font-semibold text-cyan-800 hover:bg-cyan-700 rounded-xl hover:text-white px-10 py-2 cursor-pointer"
               >

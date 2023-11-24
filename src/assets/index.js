@@ -41,6 +41,8 @@ import C_logo from "./skillLogos/C_logo.png";
 import java from "./skillLogos/java.png";
 import mui from "./skillLogos/mui.png";
 
+import cv from "./LAZARO_RESUME.pdf"
+
 export default {
   Logo,
   mockup1,
@@ -80,4 +82,5 @@ movie_ios_qr,
 movie_android_qr,
 crytpo_ios_qr,
 crypto_android_qr,
+cv
 };

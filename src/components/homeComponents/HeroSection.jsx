@@ -1,13 +1,15 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import assets from "../../assets";
-import {Typewriter, Cursor} from "react-simple-typewriter";
+import { Typewriter, Cursor } from "react-simple-typewriter";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
 const HeroSection = () => {
-    const [hover,setHover] = useState(false);
-    // const {text} = useTypewriter({
-    //   words: ['Frontend Developer', 'Mobile Developer', 'Software Engineer', 'Designer'],
-    //   loop: {}
-    // });
+  const [hover, setHover] = useState(false);
+  const [hoverDownload, setHoverDownload] = useState(false);
+
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
 
   return (
     <div id="home">
@@ -36,25 +38,33 @@ const HeroSection = () => {
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
               Hello, My name is Jego Lazaro!
             </h1>
-            <h1 className="text-3xl pt-3 font-bold tracking-tight  sm:text-4xl"
-                style={{
-                    color: "#0071A1",
-                    textShadow: "2px 2px 2px #fff"
-                }}
+            <h1
+              className="text-3xl pt-3 font-bold tracking-tight  sm:text-4xl"
+              style={{
+                color: "#0071A1",
+                textShadow: "2px 2px 2px #fff",
+              }}
             >
-              I am a 
-              <span style={{
-                    marginLeft: 10
-                }}>
-              <Typewriter
-            words={['Frontend Developer', 'Mobile Developer', 'Software Engineer', 'Designer']}
-            loop={false}
-            cursor
-            cursorStyle='|'
-            typeSpeed={70}
-            deleteSpeed={50}
-            delaySpeed={1200}
-          />
+              I am a
+              <span
+                style={{
+                  marginLeft: 10,
+                }}
+              >
+                <Typewriter
+                  words={[
+                    "Frontend Developer",
+                    "Mobile Developer",
+                    "Software Engineer",
+                    "Designer",
+                  ]}
+                  loop={false}
+                  cursor
+                  cursorStyle="|"
+                  typeSpeed={70}
+                  deleteSpeed={50}
+                  delaySpeed={1200}
+                />
               </span>
             </h1>
             <p className="mt-6 text-md leading-8 text-gray-600">
@@ -73,22 +83,33 @@ const HeroSection = () => {
                 stunning and user-friendly interfaces.
               </p>
             </p>
-            <div className="mt-10 flex items-start justify-start gap-x-6"
-                
-                
-            >
-              <a
-                href="#"
-                className="rounded-md  px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm  "
+            <div className="flex mt-10 items-start justify-start gap-x-6">
+              <ScrollLink
+                to="skills"
+                className="rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm"
                 onMouseEnter={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}
+                onClick={scrollToTop}
+                spy={true}
+                smooth={true}
+                offset={10}
+                duration={500}
                 style={{
-                    backgroundColor: hover ? "#4E93B0" :"#0071A1",
-                    color: !hover ? "#fff" :"#000" 
+                  backgroundColor: hover ? "#4E93B0" : "#0071A1",
+                  color: !hover ? "#fff" : "#000",
                 }}
               >
                 Get to Know Me
-              </a>
+              </ScrollLink>
+
+              <div className="rounded-md px-3.5 py-2.5 text-sm font-semibold shadow-sm"  onMouseEnter={() => setHoverDownload(true)}
+              onMouseLeave={() => setHoverDownload(false)}
+              style={{
+                backgroundColor: hoverDownload ? "#4E93B0" : "#0071A1",
+                color: !hoverDownload ? "#fff" : "#000",
+              }}>
+                <DownloadButton />
+              </div>
             </div>
           </div>
           <div className="lg:w-1/2">
@@ -105,3 +126,22 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
+const DownloadButton = () => {
+  const handleDownload = () => {
+    const pdfPath = assets.cv;
+    const link = document.createElement("a");
+
+    link.href = pdfPath;
+
+    link.download = "LAZARO_RESUME.pdf";
+
+    document.body.appendChild(link);
+
+    link.click();
+
+    document.body.removeChild(link);
+  };
+
+  return <button onClick={handleDownload}>Download CV</button>;
+};
