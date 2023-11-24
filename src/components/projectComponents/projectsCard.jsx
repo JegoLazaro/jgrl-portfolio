@@ -10,39 +10,52 @@ const ProjectsCard = () => {
       imageSrc: assets.la_parrilla,
       demoLink: "https://laparrillademnl.netlify.app/",
       sourceCodeLink: "https://github.com/JegoLazaro/la-parrilla",
+      ios_qr: "",
+      andorid_qr:""
     },
     {
       title: "NFT Mini Marketplace Showcase Website",
       imageSrc: assets.nft_showcase,
       demoLink: "https://nft-app-showcase-jgrl.netlify.app",
       sourceCodeLink: "https://github.com/JegoLazaro/nft-showcase-website-react-vite",
+      ios_qr: "",
+      andorid_qr:""
     },
     {
       title: "Converge GoFiber Website Clone",
       imageSrc: assets.gofiber,
       demoLink: "https://cnvrg-frontend-ui-jgrl.netlify.app",
       sourceCodeLink: "https://github.com/JegoLazaro/gofiber",
+      ios_qr: "",
+      andorid_qr:""
     },
+    
   ];
 
   const mobileProjects = [
     {
       title: "Lazaro Movie App",
       imageSrc: assets.movie_app,
-      demoLink: "https://laparrillademnl.netlify.app/",
-      sourceCodeLink: "https://github.com/JegoLazaro/la-parrilla",
+      demoLink: "",
+      sourceCodeLink: "https://github.com/JegoLazaro/movie-app",
+      ios_qr: assets.movie_ios_qr,
+      andorid_qr: assets.movie_android_qr
     },
     {
       title: "NFT Mini Marketplace",
       imageSrc: assets.nft_marketplace,
-      demoLink: "https://nft-app-showcase-jgrl.netlify.app",
-      sourceCodeLink: "https://github.com/JegoLazaro/nft-showcase-website-react-vite",
+      demoLink: "",
+      sourceCodeLink: "https://github.com/JegoLazaro/nft-marketplace",
+      ios_qr: assets.nft_ios_qr,
+      andorid_qr: assets.nft_android_qr
     },
     {
       title: "Crypto Price Tracker",
       imageSrc: assets.crypto_tracker,
-      demoLink: "https://cnvrg-frontend-ui-jgrl.netlify.app",
-      sourceCodeLink: "https://github.com/JegoLazaro/gofiber",
+      demoLink: "",
+      sourceCodeLink: "https://github.com/JegoLazaro/crypto-price-tracker",
+      ios_qr: assets.crytpo_ios_qr,
+      andorid_qr: assets.crypto_android_qr
     },
   ];
 
@@ -82,6 +95,8 @@ const ProjectsCard = () => {
             key={index}
             {...project}
             cardClassName={activeTab === "mobile" ? "max-w-xs" : "max-w-lg"} 
+            IosQR={project.ios_qr}
+            AndroidQR={project.andorid_qr}
           />
         ))}
       </div>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import assets from "../../assets";
 
 const Card = ({
   title,
@@ -7,14 +8,33 @@ const Card = ({
   demoLink,
   sourceCodeLink,
   cardClassName,
+  IosQR,
+  AndroidQR
 }) => {
   const [hover, setHover] = useState(false);
   const [hoverSource, setHoverSource] = useState(false);
   const [hoverCard, setHoverCard] = useState(false);
 
+  const [showIOSModal, setShowIOSModal] = useState(false);
+  const [showAndroidModal, setShowAndroidModal] = useState(false);
+
   const [hoverIOS, setHoverIOS] = useState(false);
   const [hoverAndroid, setHoverAndroid] = useState(false);
 
+  const handleIOSClick = () => {
+    setShowIOSModal(true);
+  };
+
+  const handleIOSModal = () => {
+    setShowIOSModal(false);
+  };
+  const handleAndroidClick = () => {
+    setShowAndroidModal(true);
+  };
+
+  const handleAndroidModal = () => {
+    setShowAndroidModal(false);
+  };
 
   return (
     <div
@@ -64,8 +84,8 @@ const Card = ({
         {cardClassName === "max-w-xs" && (
           <>
             <a
-              href="#ios_qr_button_link"
-              className="font-bold py-2 m-1 px-4 rounded flex-grow text-center"
+              className="font-bold cursor-pointer py-2 m-1 px-4 rounded flex-grow text-center"
+              onClick={handleIOSClick}
               onMouseEnter={() => setHoverIOS(true)}
               onMouseLeave={() => setHoverIOS(false)}
               style={{
@@ -76,10 +96,10 @@ const Card = ({
               IOS QR
             </a>
             <a
-              href="#android_qr_button_link"
-              className="font-bold py-2 m-1 px-4 rounded flex-grow text-center"
+              className="font-bold cursor-pointer py-2 m-1 px-4 rounded flex-grow text-center"
               onMouseEnter={() => setHoverAndroid(true)}
               onMouseLeave={() => setHoverAndroid(false)}
+              onClick={handleAndroidClick}
               style={{
                 backgroundColor: hoverAndroid ? "#6E7578" : "#0071A1",
                 color: hoverAndroid ? "#fff" : "#fff",
@@ -88,10 +108,11 @@ const Card = ({
               Android QR
             </a>
             <a
-              href="#your_third_button_link"
+              href={sourceCodeLink}
               className="font-bold py-2 m-1 px-4 rounded flex-grow text-center"
               onMouseEnter={() => setHoverSource(true)}
               onMouseLeave={() => setHoverSource(false)}
+              
               style={{
                 backgroundColor: hoverSource ? "#6E7578" : "#0071A1",
                 color: hoverSource ? "#fff" : "#fff",
@@ -102,6 +123,33 @@ const Card = ({
           </>
         )}
       </div>
+
+      {showIOSModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="bg-white p-4 rounded-lg">
+            <img src={IosQR} alt="IOS QR Code" />
+            <button
+              className="text-blue-500 hover:underline mt-4"
+              onClick={handleIOSModal}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+      {showAndroidModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="bg-white p-4 rounded-lg">
+            <img src={AndroidQR} alt="Android QR Code" />
+            <button
+              className="text-blue-500 hover:underline mt-4"
+              onClick={handleAndroidModal}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

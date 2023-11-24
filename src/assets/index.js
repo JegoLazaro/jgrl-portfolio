@@ -14,6 +14,13 @@ import crypto_tracker from "./crypto_tracker.jpg"
 import movie_app from "./movie_app.jpg"
 import nft_marketplace from "./nft_marketplace.jpg"
 
+import nft_ios_qr from "./ios_nft_app_qr.svg"
+import nft_android_qr from "./android_nft_app_qr.svg"
+import movie_ios_qr from "./ios_movie_app_qr.svg"
+import movie_android_qr from "./android_movie_app_qr.svg"
+import crytpo_ios_qr from "./ios_crypto_app_qr.svg"
+import crypto_android_qr from "./android_crypto_app_qr.svg"
+
 import expo02 from "./skillLogos/expo02.png";
 import javascript from "./skillLogos/javascript.png";
 import react from "./skillLogos/react-native-logo.png";
@@ -66,5 +73,11 @@ la_parrilla,
 nft_showcase,
 crypto_tracker,
 movie_app,
-nft_marketplace
+nft_marketplace,
+nft_ios_qr,
+nft_android_qr,
+movie_ios_qr,
+movie_android_qr,
+crytpo_ios_qr,
+crypto_android_qr,
 };
