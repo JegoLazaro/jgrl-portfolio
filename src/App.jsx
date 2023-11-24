@@ -11,7 +11,7 @@ import assets from "./assets";
 
 const App = () => {
   return (
-    <div className=" ">
+    <div className="">
       <Navbar />
       <HeroSection />
       <Skills />

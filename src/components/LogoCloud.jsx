@@ -2,7 +2,7 @@ import assets from "../assets";
 
 export default function LogoCloud() {
     return (
-      <div className=" py-10 my-10 sm:py-10 sm:my-10"
+      <div className="-mr-7 py-10 my-10 sm:py-10 sm:my-10"
         style={{
             backgroundColor: "#0071A1"
         }}
