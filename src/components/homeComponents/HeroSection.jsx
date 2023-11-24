@@ -86,7 +86,7 @@ const HeroSection = () => {
             <div className="flex mt-10 items-start justify-start gap-x-6">
               <ScrollLink
                 to="skills"
-                className="rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm"
+                className="rounded-md px-3.5 py-2.5 text-lg font-semibold text-white shadow-sm"
                 onMouseEnter={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}
                 onClick={scrollToTop}
@@ -102,7 +102,7 @@ const HeroSection = () => {
                 Get to Know Me
               </ScrollLink>
 
-              <div className="rounded-md px-3.5 py-2.5 text-sm font-semibold shadow-sm"  onMouseEnter={() => setHoverDownload(true)}
+              <div className="rounded-md mb-5 px-3.5 py-2.5 text-lg font-semibold shadow-sm"  onMouseEnter={() => setHoverDownload(true)}
               onMouseLeave={() => setHoverDownload(false)}
               style={{
                 backgroundColor: hoverDownload ? "#4E93B0" : "#0071A1",
