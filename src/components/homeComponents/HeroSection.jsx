@@ -39,13 +39,13 @@ const HeroSection = () => {
               Hello, My name is Jego Lazaro!
             </h1>
             <h1
-              className="text-3xl pt-3 font-bold tracking-tight  sm:text-4xl"
+              className="text-3xl pt-3 font-bold tracking-tight -mr-20  sm:text-4xl"
               style={{
                 color: "#0071A1",
                 textShadow: "2px 2px 2px #fff",
               }}
             >
-              I am a
+              I am a 
               <span
                 style={{
                   marginLeft: 10,
@@ -53,14 +53,14 @@ const HeroSection = () => {
               >
                 <Typewriter
                   words={[
-                    "Frontend Developer",
-                    "Mobile Developer",
-                    "Software Engineer",
-                    "Designer",
+                    "<Frontend Developer",
+                    "<Mobile Developer",
+                    "<Software Engineer",
+                    "<Designer",
                   ]}
                   loop={false}
                   cursor
-                  cursorStyle="|"
+                  cursorStyle="/>"
                   typeSpeed={70}
                   deleteSpeed={50}
                   delaySpeed={1200}

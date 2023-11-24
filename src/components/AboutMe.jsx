@@ -8,7 +8,7 @@ const AboutMe = () => {
     <div id='about'>
       <HeaderComp 
         title={"About Me"}
-        description={"About Me Description Here"}
+        description={"A tech enthusiast with a keen eye for aesthetics, transforming concepts into interactive reality."}
       />
       <AboutMeContainer />
     </div>
