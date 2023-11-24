@@ -1,8 +1,13 @@
 import React, {useState} from "react";
 import assets from "../../assets";
+import {Typewriter, Cursor} from "react-simple-typewriter";
 
 const HeroSection = () => {
     const [hover,setHover] = useState(false);
+    // const {text} = useTypewriter({
+    //   words: ['Frontend Developer', 'Mobile Developer', 'Software Engineer', 'Designer'],
+    //   loop: {}
+    // });
 
   return (
     <div id="home">
@@ -37,7 +42,20 @@ const HeroSection = () => {
                     textShadow: "2px 2px 2px #fff"
                 }}
             >
-              I am a Frontend Developer
+              I am a 
+              <span style={{
+                    marginLeft: 10
+                }}>
+              <Typewriter
+            words={['Frontend Developer', 'Mobile Developer', 'Software Engineer', 'Designer']}
+            loop={false}
+            cursor
+            cursorStyle='|'
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1200}
+          />
+              </span>
             </h1>
             <p className="mt-6 text-md leading-8 text-gray-600">
               🌐 Frontend Excellence: Translating visions into interactive &
