@@ -10,6 +10,10 @@ import gofiber from "./gofiber.png"
 import la_parrilla from "./la_parrilla.png"
 import nft_showcase from "./nft_showcase.png"
 
+import crypto_tracker from "./crypto_tracker.jpg"
+import movie_app from "./movie_app.jpg"
+import nft_marketplace from "./nft_marketplace.jpg"
+
 import expo02 from "./skillLogos/expo02.png";
 import javascript from "./skillLogos/javascript.png";
 import react from "./skillLogos/react-native-logo.png";
@@ -59,5 +63,8 @@ export default {
   mui,
   gofiber,
 la_parrilla,
-nft_showcase
+nft_showcase,
+crypto_tracker,
+movie_app,
+nft_marketplace
 };

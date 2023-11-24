@@ -1,49 +1,15 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Card from "./Card";
 import assets from "../../assets";
 
-const WebsiteProjects = () => {
+const ProjectsCard = () => {
   const [activeTab, setActiveTab] = useState("website");
   const websiteProjects = [
-    {
-      title: "La Parrila de Manila Website",
-      imageSrc: assets.la_parrilla,
-      demoLink: "https://laparrillademnl.netlify.app/",
-      sourceCodeLink: "https://github.com/JegoLazaro/la-parrilla",
-    },
-    {
-      title: "NFT Mini Marketplace Showcase Website",
-      imageSrc: assets.nft_showcase,
-      demoLink: "https://nft-app-showcase-jgrl.netlify.app",
-      sourceCodeLink: "https://github.com/JegoLazaro/nft-showcase-website-react-vite",
-    },
-    {
-      title: "Converge GoFiber Website Clone",
-      imageSrc: assets.gofiber,
-      demoLink: "https://cnvrg-frontend-ui-jgrl.netlify.app",
-      sourceCodeLink: "https://github.com/JegoLazaro/gofiber",
-    },
+    // ... (your website projects data)
   ];
 
   const mobileProjects = [
-    {
-      title: "PROJECT 1",
-      imageSrc: assets.la_parrilla,
-      demoLink: "https://laparrillademnl.netlify.app/",
-      sourceCodeLink: "https://github.com/JegoLazaro/la-parrilla",
-    },
-    {
-      title: "PROJECT 2",
-      imageSrc: assets.nft_showcase,
-      demoLink: "https://nft-app-showcase-jgrl.netlify.app",
-      sourceCodeLink: "https://github.com/JegoLazaro/nft-showcase-website-react-vite",
-    },
-    {
-      title: "PROJECT 3",
-      imageSrc: assets.gofiber,
-      demoLink: "https://cnvrg-frontend-ui-jgrl.netlify.app",
-      sourceCodeLink: "https://github.com/JegoLazaro/gofiber",
-    },
+    // ... (your mobile projects data)
   ];
 
   const handleTabClick = (tab) => {
@@ -77,11 +43,15 @@ const WebsiteProjects = () => {
 
       <div className="flex flex-wrap justify-center">
         {projectsToDisplay.map((project, index) => (
-          <Card key={index} {...project} />
+          <Card
+            key={index}
+            {...project}
+            cardClassName={activeTab === "mobile" ? "max-w-xs" : "max-w-xs"} // Apply different max-width based on project type
+          />
         ))}
       </div>
     </div>
   );
 };
 
-export default WebsiteProjects;
+export default ProjectsCard;

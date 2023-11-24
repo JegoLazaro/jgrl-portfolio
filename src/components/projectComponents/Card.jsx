@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 
-const ProjectCard = ({ title, imageSrc, demoLink, sourceCodeLink }) => {
+const ProjectCard = ({ title, imageSrc, demoLink, sourceCodeLink, cardClassName  }) => {
   const [hover, setHover] = useState(false);
 
   const [hoverSource, setHoverSource] = useState(false);
@@ -10,7 +10,7 @@ const ProjectCard = ({ title, imageSrc, demoLink, sourceCodeLink }) => {
 
   return (
     <div
-      className={`max-w-md rounded overflow-hidden shadow-lg m-4 flex flex-col justify-between transition-transform transform ${
+      className={` ${cardClassName} max-w-md rounded overflow-hidden shadow-lg m-4 flex flex-col justify-between transition-transform transform ${
         hoverCard ? "scale-105" : ""
       }`}
       onMouseEnter={() => setHoverCard(true)}
@@ -59,6 +59,8 @@ ProjectCard.propTypes = {
   imageSrc: PropTypes.string.isRequired,
   demoLink: PropTypes.string.isRequired,
   sourceCodeLink: PropTypes.string.isRequired,
+  
+  cardClassName: PropTypes.string.isRequired,
 };
 
 export default ProjectCard;
