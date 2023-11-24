@@ -19,8 +19,8 @@ const App = () => {
       <AboutMe />
       <Contact />
       <LogoCloud />
-      <div className="mx-auto border-t-2 border-cyan-600 lg:pt-16 md:pt-12 sm:mx-20 pb-10 lg:mx-10">
-        <footer className="flex justify-between p-4 text-cyan-800">
+      <div className="mx-auto border-t-2 border-cyan-600 lg:pt-16 md:pt-12 sm:mx-20 pb-4  lg:mx-10">
+        <footer className="flex justify-between lg:-mt-14 p-4 text-cyan-800">
           <div className="text-left ">
             <p>&copy; 2023 JGRL.dev. All rights reserved.</p>
           </div>

@@ -12,7 +12,7 @@ export default function Forms() {
 
 
   return (
-    <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+    <div className="isolate bg-white px-6 py-24 -mb-10 sm:-mb-10 sm:py-32 lg:px-8">
       <form action="#" method="POST" className="mx-auto -mt-16 lg:-mt-28 max-w-xl sm:mt-20">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
@@ -82,7 +82,7 @@ export default function Forms() {
               onMouseLeave={() => setHoverDownload(false)}
               style={{
                 backgroundColor: hoverDownload ? "#4E93B0" : "#0071A1",
-                color: !hoverDownload ? "#fff" : "#000",
+                color: !hoverDownload ? "#fff" : "#fff",
               }}
           >
             Let's talk
