@@ -5,7 +5,7 @@ import Forms from './contactMeComonents/forms'
 const ContactMe = () => {
 
   return (
-    <div id='contact'>
+    <div id='contact' className='-mr-7'>
       <HeaderComp 
         title={"Contact Me"}
         description={"Contact Me Form and Social Media Cards Here"}

@@ -124,7 +124,7 @@ const SkillCards = () => {
   ];
 
   return (
-    <div className={`${styles.section}  lg:-mt-28 md:-mt-20 sm:-mt-12`}>
+    <div className={`${styles.section} -mr-8  lg:-mt-28 md:-mt-20 sm:-mt-12`}>
       <div className={`${styles.subSection} flex-col text-center`}>
         <div className={styles.flexWrap}>
           {skillsData.map((skill, index) => (

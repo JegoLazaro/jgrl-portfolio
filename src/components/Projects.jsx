@@ -25,7 +25,7 @@ const Projects = () => {
   //     // More posts...
   //   ]
   return (
-    <div id="projects">
+    <div id="projects" className="-mr-6">
       <HeaderComp title={"Projects"} description={"Immersive digital experiences with React JS and React Native mobile apps. Elevating user engagement through innovative design and seamless functionality."} reverse/>
       <ProjectCards />
     </div>
