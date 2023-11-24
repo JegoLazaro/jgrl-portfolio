@@ -47,7 +47,23 @@ const AboutMeContainer = () => {
                  textShadow: "1px 2px 3px #fff",
               }}
             >
-              A dedicated React JS and React Native developer. I earned my BS in Computer Science from DLSU-Manila, specializing in Software Technology. Fueled by a love for innovation and creativity, I thrive on transforming ideas into seamless digital experiences. Let's embark on a journey to bring your projects to life!
+              <span
+                style={{
+                  marginLeft: 10,
+                }}
+              >
+                <Typewriter
+                  words={["A dedicated React JS and React Native developer. I earned my BS in Computer Science from DLSU-Manila, specializing in Software Technology. Fueled by a love for innovation and creativity, I thrive on transforming ideas into seamless digital experiences. Let's embark on a journey to bring your projects to life!"
+                  ]}
+                  loop={3}
+                  cursor
+                  cursorStyle="|"
+                  typeSpeed={70}
+                  deleteSpeed={50}
+                  delaySpeed={1200}
+                />
+              </span>
+             
             </h1>
           </div>
           

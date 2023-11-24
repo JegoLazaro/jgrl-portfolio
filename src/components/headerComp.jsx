@@ -19,9 +19,7 @@ const HeaderComp = ({title, description, reverse}) => {
         </p>
       </div>
     </div>
-    {/* <div className="mx-auto grid max-w-2xl grid-rows-2 gap-x-8  border-t-2 border-gray-200 lg:pt-48 md:pt-40 sm:mt-1 sm:pt-1 lg:mx-2 lg:max-w-none lg:grid-rows-3">
-      
-    </div> */}
+    
   </div>
   
   )

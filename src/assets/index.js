@@ -49,6 +49,11 @@ import react_cloud from "./skillLogos/react_cloud.png"
 import tailwindcss_cloud from "./skillLogos/tailwindcss_cloud.png"
 import git_cloud from "./skillLogos/git_cloud.png"
 
+import ExpoLogo from "./ExpoLogo.png"
+import FbLogo from "./FbLogo.png"
+import LinkedInLogo from "./LinkedInLogo.png"
+import GithubLogo from "./GithubLogo.png"
+
 export default {
   Logo,
   mockup1,
@@ -93,5 +98,9 @@ nodejs_cloud,
 react_cloud,
 tailwindcss_cloud,
 figma_cloud,
-git_cloud
+git_cloud,
+ExpoLogo,
+FbLogo,
+LinkedInLogo,
+GithubLogo
 };
