@@ -7,9 +7,14 @@ const HeroSection = () => {
   const [hover, setHover] = useState(false);
   const [hoverDownload, setHoverDownload] = useState(false);
 
-  const scrollToTop = () => {
-    scroll.scrollToTop();
-  };
+  const [showCVModal, setShowCVModal] = useState(false);
+  // const handleCVClick = () => {
+  //   setShowCVModal(true);
+  // };
+
+  // const handleIOSModal = () => {
+  //   setShowCVModal(false);
+  // };
 
   return (
     <div id="home">
@@ -89,14 +94,14 @@ const HeroSection = () => {
                 className="rounded-md px-3.5 py-2.5 text-lg font-semibold text-white shadow-sm"
                 onMouseEnter={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}
-                onClick={scrollToTop}
+                
                 spy={true}
                 smooth={true}
                 offset={10}
                 duration={500}
                 style={{
                   backgroundColor: hover ? "#4E93B0" : "#0071A1",
-                  color: !hover ? "#fff" : "#000",
+                  color: !hover ? "#fff" : "#fff",
                 }}
               >
                 Get to Know Me
@@ -106,7 +111,7 @@ const HeroSection = () => {
               onMouseLeave={() => setHoverDownload(false)}
               style={{
                 backgroundColor: hoverDownload ? "#4E93B0" : "#0071A1",
-                color: !hoverDownload ? "#fff" : "#000",
+                color: !hoverDownload ? "#fff" : "#fff",
               }}>
                 <DownloadButton />
               </div>

@@ -4,17 +4,12 @@ import { Typewriter, Cursor } from "react-simple-typewriter";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
 const AboutMeContainer = () => {
-  const aboutMe = "Hello! I'm Jego Lazaro, a dedicated React JS and React Native developer. I earned my BS in Computer Science from DLSU-Manila, specializing in Software Technology. Fueled by a love for innovation and creativity, I thrive on transforming ideas into seamless digital experiences. Let's embark on a journey to bring your projects to life!";
-  const [hover, setHover] = useState(false);
-  const [hoverDownload, setHoverDownload] = useState(false);
-
-  const scrollToTop = () => {
-    scroll.scrollToTop();
-  };
+  const aboutMe = "A dedicated React JS and React Native developer. I earned my BS in Computer Science from DLSU-Manila, specializing in Software Technology. Fueled by a love for innovation and creativity, I thrive on transforming ideas into seamless digital experiences. Let's embark on a journey to bring your projects to life!";
+  
 
   return (
     <div>
-      <div className="relative isolate px-6 lg:px-8 -mt-32 mb-10">
+      <div className="relative isolate px-6 lg:px-8 -mt-32 mb-10 ">
         <div
           className="absolute inset-x-2 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
           aria-hidden="true"
@@ -36,7 +31,7 @@ const AboutMeContainer = () => {
               alt="Mockup"
             />
           </div>
-          <div className="lg:w-1/2 pl-12 fadeRightMini">
+          <div className="lg:w-1/2 pl-12 sm:mr-4 fadeRightMini">
             <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Hello, I'm Jego Lazaro!
             </h1>
@@ -49,12 +44,11 @@ const AboutMeContainer = () => {
             >
               <span
                 style={{
-                  marginLeft: 10,
+                  marginLeft: 0,
                 }}
               >
                 <Typewriter
-                  words={["A dedicated React JS and React Native developer. I earned my BS in Computer Science from DLSU-Manila, specializing in Software Technology. Fueled by a love for innovation and creativity, I thrive on transforming ideas into seamless digital experiences. Let's embark on a journey to bring your projects to life!"
-                  ]}
+                  words={[aboutMe]}
                   loop={7}
                   cursor
                   cursorStyle="|"

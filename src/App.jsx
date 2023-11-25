@@ -11,7 +11,7 @@ import assets from "./assets";
 
 const App = () => {
   return (
-    <div className="flex-1 justify-center lg:-mr-0 -mr-4 ">
+    <div className="flex-1 justify-center lg:-mr-4 -mr-4 ">
       <Navbar />
       <HeroSection />
       <Skills />
@@ -19,7 +19,7 @@ const App = () => {
       <AboutMe />
       <Contact />
       <LogoCloud />
-      <div className="items-center justify-center mx-auto max-w-7xl border-t-2 lg:-mr-0 -mr-8 border-cyan-600 lg:pt-16 md:pt-12 sm:mx-20 pb-4  lg:mx-10">
+      <div className="items-center justify-center mx-auto max-w-8xl border-t-2 lg:mr-8 -mr-8 border-cyan-600 lg:pt-16 md:pt-12 sm:mx-20 pb-4  lg:mx-10">
         <footer className="flex justify-between lg:-mt-14 p-4 text-cyan-800">
           <div className="text-left pr-2">
             <p>&copy; 2023 JGRL.dev. All rights reserved.</p>
