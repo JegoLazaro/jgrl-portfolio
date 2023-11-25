@@ -8,6 +8,7 @@ import HeroSection from "./components/homeComponents/HeroSection";
 import Projects from "./components/Projects";
 import LogoCloud from "./components/LogoCloud";
 import assets from "./assets";
+import { Analytics } from '@vercel/analytics/react';
 
 const App = () => {
   return (
@@ -40,6 +41,7 @@ const App = () => {
           </div>
         </footer>
       </div>
+      <Analytics />
     </div>
   );
 };
