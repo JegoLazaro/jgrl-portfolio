@@ -89,7 +89,7 @@ const ProjectsCard = () => {
         </ul>
       </div>
 
-      <div className="flex flex-wrap justify-center">
+      <div className="flex flex-wrap justify-center items-center mx-auto max-w-7xl">
         {projectsToDisplay.map((project, index) => (
           <Card
             key={index}

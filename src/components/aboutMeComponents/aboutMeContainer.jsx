@@ -29,14 +29,14 @@ const AboutMeContainer = () => {
         </div>
         
         <div className="flex flex-col lg:flex-row items-center justify-start mx-auto max-w-5xl py-10 sm:py-10 lg:py-2">
-        <div className="lg:w-1/2">
+        <div className="lg:w-1/2 fadeLeftMini">
             <img
               className="img_mockup w-full"
               src={assets.mockup2}
               alt="Mockup"
             />
           </div>
-          <div className="lg:w-1/2 pl-12">
+          <div className="lg:w-1/2 pl-12 fadeRightMini">
             <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Hello, I'm Jego Lazaro!
             </h1>
@@ -55,12 +55,12 @@ const AboutMeContainer = () => {
                 <Typewriter
                   words={["A dedicated React JS and React Native developer. I earned my BS in Computer Science from DLSU-Manila, specializing in Software Technology. Fueled by a love for innovation and creativity, I thrive on transforming ideas into seamless digital experiences. Let's embark on a journey to bring your projects to life!"
                   ]}
-                  loop={3}
+                  loop={7}
                   cursor
                   cursorStyle="|"
                   typeSpeed={70}
-                  deleteSpeed={50}
-                  delaySpeed={1200}
+                  deleteSpeed={2}
+                  delaySpeed={7200}
                 />
               </span>
              

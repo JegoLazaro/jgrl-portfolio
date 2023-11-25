@@ -1,3 +1,85 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.fadeLeftMini {
+    animation: fadeLeftMini 1s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+  }
+  
+  .fadeRightMini {
+    animation: fadeRightMini 1s;
+    animation-fill-mode: both;
+  }
+  .fadeTopMini {
+    animation: fadeTopMini 1s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+  }
+  
+  .fadeBottomMini {
+    animation: fadeBottomMini 1s;
+    animation-fill-mode: both;
+  }
+  .fadeMini {
+    animation: fadeMini 1s;
+    animation-fill-mode: both;
+  }
+  
+  @keyframes fadeTopMini {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 40%, 0);
+      /* transform: translate3d(0, -40%, 0); */
+
+    }
+    100% {
+      opacity: 1;
+      transform: translateZ(0);
+    }
+  }
+  
+  @keyframes fadeBottomMini {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 40%, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateZ(0);
+    }
+  }
+  
+  @keyframes fadeLeftMini {
+    0% {
+      opacity: 0;
+      transform: translate3d(-40%, 0, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateZ(0);
+    }
+  }
+  
+  @keyframes fadeRightMini {
+    0% {
+      opacity: 0;
+      transform: translate3d(40%, 0, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateZ(0);
+    }
+  }
+  
+  @keyframes fadeMini {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 0, -40%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateZ(0);
+    }
+  }

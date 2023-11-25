@@ -34,7 +34,7 @@ const HeroSection = () => {
           />
         </div>
         <div className="flex flex-col lg:flex-row items-center justify-start mx-auto max-w-5xl py-32 sm:py-36 lg:py-28">
-          <div className="lg:w-1/2 pr-8">
+          <div className={`lg:w-1/2 pr-8 fadeLeftMini`}>
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
               Hello, My name is Jego Lazaro!
             </h1>
@@ -112,7 +112,7 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
-          <div className="lg:w-1/2">
+          <div className="fadeRightMini lg:w-1/2">
             <img
               className="img_mockup w-full"
               src={assets.mockup1}

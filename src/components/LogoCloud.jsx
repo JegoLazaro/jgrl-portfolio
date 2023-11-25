@@ -2,12 +2,12 @@ import assets from "../assets";
 
 export default function LogoCloud() {
     return (
-      <div className="-mr-8 lg:-mr-0 py-10 my-10 sm:py-10 sm:my-10"
+      <div className="-mr-8 items-center justify-center mx-auto max-w-8xl  lg:-mr-8 py-10 my-10 sm:py-10 sm:my-10"
         style={{
             backgroundColor: "#0071A1"
         }}
       >
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="items-center justify-center mx-auto max-w-5xl px-6 lg:px-8">
           <h2 className="text-center text-lg font-semibold leading-8 text-white">
             Powered by the best technologies
           </h2>

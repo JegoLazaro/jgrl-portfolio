@@ -14,12 +14,23 @@ export const FeatureCard = ({ iconUrl, iconText, shadow_Color }) => {
       onMouseLeave={() => setHover(false)}
       style={{
         boxShadow: hover
-          ? `1px 3px 20px 2px ${shadow_Color}`
-          : "0px 0px 0px #000",
+          ? `1px 3px 20px 4px ${shadow_Color}`
+          : "0.5px 1px 2px #000",
       }}
     >
       <img src={iconUrl} alt="icon" className={`${styles.featureImg}`} />
-      <p className={`${styles.featureText}`}>{iconText}</p>
+      <p className={`${styles.featureText}`}
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+        style={{
+          color: hover
+            ?  `${shadow_Color}`
+            :  "#000",
+          textShadow: !hover? "none" :"1px 0px 0.5px 0px #000"
+        }}
+      >
+        {iconText}
+      </p>
     </div>
   );
 };
@@ -124,11 +135,11 @@ const SkillCards = () => {
   ];
 
   return (
-    <div className={`${styles.section} -mr-8  lg:-mt-28 md:-mt-20 sm:-mt-12`}>
-      <div className={`${styles.subSection} flex-col text-center`}>
+    <div className={`${styles.section} -mr-8  lg:-mt-22 md:-mt-20 sm:-mt-12`}>
+      <div className={`${styles.subSection} items-center justify-start mx-auto max-w-7xl flex-col text-center `}>
         <div className={styles.flexWrap}>
           {skillsData.map((skill, index) => (
-            <a key={index} href="">
+            <a key={index} className="cursor-pointer">
               <FeatureCard
                 iconUrl={skill.iconUrl}
                 iconText={skill.iconText}
