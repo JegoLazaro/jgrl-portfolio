@@ -72,22 +72,23 @@ const HeroSection = () => {
                 />
               </span>
             </h1>
-            <p className="mt-6 text-md leading-8 text-gray-600">
+            <p className="mt-6 text-md font-semibold leading-8 text-gray-600">
               🌐 Frontend Excellence: Translating visions into interactive &
               responsive web experiences.
-              <p className="mt-2 text-md leading-8 text-gray-600">
+              </p>
+              <p className="mt-2 text-md font-semibold leading-8 text-gray-600">
                 📱 Mobile Magic: Building sleek and powerful mobile apps that
                 redefine user expectations.
               </p>
-              <p className="mt-2 text-md leading-8 text-gray-600">
+              <p className="mt-2 text-md font-semibold leading-8 text-gray-600">
                 💻 Software Wizardry: Crafting robust, scalable software
                 solutions that stand the test of time.
               </p>
-              <p className="mt-2 text-md leading-8 text-gray-600">
+              <p className="mt-2 text-md font-semibold leading-8 text-gray-600">
                 ✨ Design Elegance: Merging form and function to create visually
                 stunning and user-friendly interfaces.
               </p>
-            </p>
+            
             <div className="flex mt-10 items-start justify-start gap-x-6">
               <ScrollLink
                 to="skills"

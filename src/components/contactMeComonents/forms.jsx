@@ -12,7 +12,7 @@ export default function Forms() {
 
 
   return (
-    <div className="isolate bg-white px-6 py-24 -mb-10 sm:-mb-10 sm:py-2 sm:pb-20 lg:px-8">
+    <div className="isolate bg-white px-6 py-24 lg:py-36 -mb-10 sm:-mb-10 sm:py-2 sm:pb-20 lg:px-8">
       <form action="#" method="POST" className="mx-auto -mt-16 lg:-mt-28 max-w-xl sm:mt-20">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>

@@ -6,9 +6,9 @@ import Navbar from "./components/Navbar";
 import Skills from "./components/Skills";
 import HeroSection from "./components/homeComponents/HeroSection";
 import Projects from "./components/Projects";
-import LogoCloud from "./components/LogoCloud";
 import assets from "./assets";
 import { Analytics } from '@vercel/analytics/react';
+import HeaderComp from "./components/headerComp";
 
 const App = () => {
   return (
@@ -19,8 +19,8 @@ const App = () => {
       <Projects />
       <AboutMe />
       <Contact />
-      <LogoCloud />
-      <div className="items-center justify-center mx-auto max-w-8xl border-t-2 lg:mr-8 -mr-8 border-cyan-600 lg:pt-16 md:pt-12 sm:mx-20 pb-4  lg:mx-10">
+      <HeaderComp isCloud reverse />
+      <div className="mt-6 sm:mt-5 items-center justify-center mx-auto max-w-8xl border-t-2 lg:mr-8 -mr-8 border-cyan-600 lg:pt-16 md:pt-12 sm:mx-20 pb-4  lg:mx-10">
         <footer className="flex justify-between lg:-mt-14 p-4 text-cyan-800">
           <div className="text-left pr-2">
             <p>&copy; 2023 JGRL.dev. All rights reserved.</p>
