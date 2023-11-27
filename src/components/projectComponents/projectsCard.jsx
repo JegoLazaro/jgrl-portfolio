@@ -11,7 +11,8 @@ const ProjectsCard = () => {
       demoLink: "https://laparrillademnl.netlify.app/",
       sourceCodeLink: "https://github.com/JegoLazaro/la-parrilla",
       ios_qr: "",
-      andorid_qr:""
+      andorid_qr:"",
+      projectOV: "Crafted a visually appealing restaurant website with React JS and Tailwind CSS, seamlessly integrating Google Maps API to help customers find the location easily"
     },
     {
       title: "NFT Mini Marketplace Showcase Website",
@@ -19,7 +20,8 @@ const ProjectsCard = () => {
       demoLink: "https://nft-app-showcase-jgrl.netlify.app",
       sourceCodeLink: "https://github.com/JegoLazaro/nft-showcase-website-react-vite",
       ios_qr: "",
-      andorid_qr:""
+      andorid_qr:"",
+      projectOV: "Website showcasing a React Native mobile app for NFT management. Powered by React, Vite, and JavaScript, it delivers a seamless, responsive user experience."
     },
     {
       title: "Converge GoFiber Website Clone",
@@ -27,7 +29,8 @@ const ProjectsCard = () => {
       demoLink: "https://cnvrg-frontend-ui-jgrl.netlify.app",
       sourceCodeLink: "https://github.com/JegoLazaro/gofiber",
       ios_qr: "",
-      andorid_qr:""
+      andorid_qr:"",
+      projectOV: "Experience an improved user interface with this React.js and React Bootstrap frontend replica of Converge GoFiber.ph. A testament to my internship project's frontend development expertise."
     },
     
   ];
@@ -39,7 +42,8 @@ const ProjectsCard = () => {
       demoLink: "",
       sourceCodeLink: "https://github.com/JegoLazaro/movie-app",
       ios_qr: assets.movie_ios_qr,
-      andorid_qr: assets.movie_android_qr
+      andorid_qr: assets.movie_android_qr,
+      projectOV: "Explore the cinematic world with the React Native Movie App! Unveil movie details, cast info, and TV shows using React Native and Expo, powered by the TMDB API."
     },
     {
       title: "NFT Mini Marketplace",
@@ -47,7 +51,8 @@ const ProjectsCard = () => {
       demoLink: "",
       sourceCodeLink: "https://github.com/JegoLazaro/nft-marketplace",
       ios_qr: assets.nft_ios_qr,
-      andorid_qr: assets.nft_android_qr
+      andorid_qr: assets.nft_android_qr,
+      projectOV: "Dive into the NFT world with the React Native NFT Mini Marketplace app! Developed using React Native and Expo, it offers a captivating mobile marketplace for seamless exploration and trading of digital assets."
     },
     {
       title: "Crypto Price Tracker",
@@ -55,7 +60,8 @@ const ProjectsCard = () => {
       demoLink: "",
       sourceCodeLink: "https://github.com/JegoLazaro/crypto-price-tracker",
       ios_qr: assets.crytpo_ios_qr,
-      andorid_qr: assets.crypto_android_qr
+      andorid_qr: assets.crypto_android_qr,
+      projectOV: "Explore the world of cryptocurrencies with the React Native Crypto Price Tracker! Track prices and trends using interactive charts, powered by React Native and real-time data from the CoinGecko API."
     },
   ];
 

@@ -11,6 +11,7 @@ const Card = ({
   cardClassName,
   IosQR,
   AndroidQR,
+  projectOV
 }) => {
   const [hover, setHover] = useState(false);
   const [hoverSource, setHoverSource] = useState(false);
@@ -52,6 +53,9 @@ const Card = ({
       />
       <div className="px-6 py-4">
         <div className="font-semibold text-xl mb-2 text-center">{title}</div>
+        <p className=" text-justify leading-6 tracking-tighter ">
+          {projectOV}
+        </p>
       </div>
       <div className="">
         {cardClassName !== "max-w-xs" && (

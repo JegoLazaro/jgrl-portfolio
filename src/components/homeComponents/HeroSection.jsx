@@ -89,7 +89,7 @@ const HeroSection = () => {
                 stunning and user-friendly interfaces.
               </p>
             
-            <div className="flex mt-10 items-start justify-start gap-x-6">
+            <div className="cursor-pointer flex mt-10 items-start justify-start gap-x-6">
               <ScrollLink
                 to="skills"
                 className="rounded-md px-3.5 py-2.5 text-lg font-semibold text-white shadow-sm"
