@@ -17,6 +17,7 @@ const Forms = () => {
     emailjs.sendForm('service_9v91ywq', 'template_zix1wsq', form.current, 'zefYFrTnbQ92biUlo')
       .then((result) => {
           console.log(result.text);
+          alert("Message Sent Successfully, Thank You For Reaching Out!");
       }, (error) => {
           console.log(error.text);
       });
@@ -25,8 +26,6 @@ const Forms = () => {
   return (
     <div className="isolate bg-white px-6 py-24 lg:py-32 md:py-14 -mb-10 sm:-mb-10 sm:py-0 sm:pb-20 lg:px-8">
       <form
-        // action="#"
-        // method="POST"
         ref={form}
         onSubmit={sendEmail}
         className="mx-auto -mt-16 lg:-mt-28 max-w-xl sm:mt-20"
@@ -49,9 +48,6 @@ const Forms = () => {
                 placeholder="First Name"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-400 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6"
               />
-              {/* <div className="error-text text-red-500 font-semibold">
-                Please Enter your First Name *
-              </div> */}
             </div>
           </div>
           <div>
@@ -71,9 +67,6 @@ const Forms = () => {
                 placeholder="Last Name"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-400 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6"
               />
-              {/* <div className="error-text text-red-500 font-semibold">
-                Please Enter your Last Name *
-              </div> */}
             </div>
           </div>
 
@@ -94,9 +87,6 @@ const Forms = () => {
                 placeholder="Email Address"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-400 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6"
               />
-              {/* <div className="error-text text-red-500 font-semibold">
-                Please Enter your Email Address *
-              </div> */}
             </div>
           </div>
 
@@ -117,9 +107,6 @@ const Forms = () => {
                 placeholder="Subject"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-400 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6"
               />
-              {/* <div className="error-text text-red-500 font-semibold">
-                Please Enter the Subject of your message *
-              </div> */}
             </div>
           </div>
 
@@ -140,9 +127,6 @@ const Forms = () => {
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-400 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6"
                 defaultValue={""}
               />
-              {/* <div className="error-text text-red-500 font-semibold">
-                Please Enter your Message *
-              </div> */}
             </div>
           </div>
         </div>
