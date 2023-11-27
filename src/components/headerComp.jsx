@@ -71,7 +71,11 @@ const HeaderComp = ({ title, description, reverse, isCloud }) => {
             >
               {title}
             </h2>
-            <p className="mt-2 mb-4 text-justify text-lg leading-8 text-slate-700">
+            <p className="mt-2 mb-4 text-justify text-lg leading-8"
+              style={{
+                color: reverse ? "#00FFF0" : "#0071A1"
+              }}
+            >
               {description}
             </p>
           </div>

@@ -8,7 +8,7 @@ const ContactMe = () => {
     <div id='contact' className='-mr-7'>
       <HeaderComp 
         title={"Contact Me"}
-        description={"Contact Me Form and Social Media Cards Here"}
+        description={"Let's Connect! Share Your Thoughts and Inquiries. I'm Excited to Hear from You!"}
         reverse
       />
       <Forms />

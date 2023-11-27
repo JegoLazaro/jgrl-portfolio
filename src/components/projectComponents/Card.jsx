@@ -10,7 +10,7 @@ const Card = ({
   sourceCodeLink,
   cardClassName,
   IosQR,
-  AndroidQR
+  AndroidQR,
 }) => {
   const [hover, setHover] = useState(false);
   const [hoverSource, setHoverSource] = useState(false);
@@ -39,24 +39,25 @@ const Card = ({
 
   return (
     <div
-      className={` ${cardClassName} max-w-md rounded overflow-hidden shadow-lg m-8 flex flex-col justify-between transition-transform transform ${
-        hoverCard ? "scale-105" : ""
-      }`}
+      className={` ${cardClassName} max-w-md rounded overflow-hidden shadow-lg m-8 flex flex-col justify-between `}
       onMouseEnter={() => setHoverCard(true)}
       onMouseLeave={() => setHoverCard(false)}
     >
-      <img className="w-full h-auto" src={imageSrc} alt={title} />
+      <img
+        className={`w-full h-auto transition-transform transform ${
+          hoverCard ? "scale-105" : ""
+        }`}
+        src={imageSrc}
+        alt={title}
+      />
       <div className="px-6 py-4">
         <div className="font-semibold text-xl mb-2 text-center">{title}</div>
       </div>
-      <div className="px-6 pb-4 flex flex-wrap items-center">
+      <div className="">
         {cardClassName !== "max-w-xs" && (
-          <>
-            <a
-              href={demoLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-bold py-2 px-4 rounded mr-2 flex-grow text-center"
+          <div className="px-6 pb-4 flex flex-wrap items-center">
+            <div
+              className=" cursor-pointer font-bold py-2 px-4 rounded mr-2 flex-grow text-center"
               onMouseEnter={() => setHover(true)}
               onMouseLeave={() => setHover(false)}
               style={{
@@ -64,8 +65,10 @@ const Card = ({
                 color: hover ? "#fff" : "#fff",
               }}
             >
-              Demo
-            </a>
+              <a href={demoLink} target="_blank" rel="noopener noreferrer">
+                Demo
+              </a>
+            </div>
             <a
               href={sourceCodeLink}
               target="_blank"
@@ -80,10 +83,10 @@ const Card = ({
             >
               Source Code
             </a>
-          </>
+          </div>
         )}
         {cardClassName === "max-w-xs" && (
-          <>
+          <div className="px-6 pb-4 flex flex-wrap items-center">
             <a
               className="font-bold cursor-pointer py-2 m-1 px-4 rounded flex-grow text-center"
               onClick={handleIOSClick}
@@ -110,10 +113,11 @@ const Card = ({
             </a>
             <a
               href={sourceCodeLink}
+              target="_blank"
+              rel="noopener noreferrer"
               className="font-bold py-2 m-1 px-4 rounded flex-grow text-center"
               onMouseEnter={() => setHoverSource(true)}
               onMouseLeave={() => setHoverSource(false)}
-              
               style={{
                 backgroundColor: hoverSource ? "#6E7578" : "#0071A1",
                 color: hoverSource ? "#fff" : "#fff",
@@ -121,7 +125,7 @@ const Card = ({
             >
               Source Code
             </a>
-          </>
+          </div>
         )}
       </div>
 
