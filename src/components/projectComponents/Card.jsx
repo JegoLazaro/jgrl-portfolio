@@ -40,14 +40,14 @@ const Card = ({
 
   return (
     <div
-      className={` ${cardClassName} max-w-md rounded overflow-hidden shadow-lg m-8 flex flex-col justify-between `}
+      className={` ${cardClassName} max-w-md transition-transform transform ${
+        hoverCard ? "scale-105" : ""
+      } rounded overflow-hidden shadow-lg m-8 flex flex-col justify-between `}
       onMouseEnter={() => setHoverCard(true)}
       onMouseLeave={() => setHoverCard(false)}
     >
       <img
-        className={`w-full h-auto transition-transform transform ${
-          hoverCard ? "scale-105" : ""
-        }`}
+        className={`w-full h-auto `}
         src={imageSrc}
         alt={title}
       />
@@ -59,6 +59,7 @@ const Card = ({
       </div>
       <div className="">
         {cardClassName !== "max-w-xs" && (
+          
           <div className="px-6 pb-4 flex flex-wrap items-center">
             <div
               className=" cursor-pointer font-bold py-2 px-4 rounded mr-2 flex-grow text-center"
@@ -133,7 +134,7 @@ const Card = ({
         )}
       </div>
 
-      {showIOSModal && (
+      {showIOSModal && cardClassName === "max-w-xs" && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="bg-white p-4 rounded-lg">
             <img src={IosQR} alt="IOS QR Code" />
@@ -141,12 +142,12 @@ const Card = ({
               className="text-blue-500 hover:underline mt-4"
               onClick={handleIOSModal}
             >
-              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+              <XMarkIcon className="h-10 w-10" aria-hidden="true" />
             </button>
           </div>
         </div>
       )}
-      {showAndroidModal && (
+      {showAndroidModal && cardClassName === "max-w-xs" && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="bg-white p-4 rounded-lg">
             <img src={AndroidQR} alt="Android QR Code" />
@@ -154,7 +155,7 @@ const Card = ({
               className="text-blue-500 hover:underline mt-4"
               onClick={handleAndroidModal}
             >
-              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+              <XMarkIcon className="h-10 w-10" aria-hidden="true" />
             </button>
           </div>
         </div>
