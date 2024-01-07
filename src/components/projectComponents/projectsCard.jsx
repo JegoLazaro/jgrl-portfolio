@@ -6,6 +6,15 @@ const ProjectsCard = () => {
   const [activeTab, setActiveTab] = useState("website");
   const websiteProjects = [
     {
+      title: "Crypto Watch HQ",
+      imageSrc: assets.cwhq,
+      demoLink: "https://cryptowatch-hq.vercel.app/",
+      sourceCodeLink: "https://github.com/JegoLazaro/crypto-watch-hq",
+      ios_qr: "",
+      andorid_qr:"",
+      projectOV: "Track crypto prices seamlessly with our React.js and Tailwind CSS-powered tool. Real-time updates, interactive design, and a sleek interface for effortless crypto tracking."
+    },
+    {
       title: "La Parrila de Manila Website",
       imageSrc: assets.la_parrilla,
       demoLink: "https://laparrillademnl.netlify.app/",

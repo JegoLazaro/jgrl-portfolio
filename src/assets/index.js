@@ -54,6 +54,8 @@ import FbLogo from "./FbLogo.png"
 import LinkedInLogo from "./LinkedInLogo.png"
 import GithubLogo from "./GithubLogo.png"
 
+import cwhq from "./cwhq.png"
+
 export default {
   Logo,
   mockup1,
@@ -102,5 +104,6 @@ git_cloud,
 ExpoLogo,
 FbLogo,
 LinkedInLogo,
-GithubLogo
+GithubLogo,
+cwhq
 };
