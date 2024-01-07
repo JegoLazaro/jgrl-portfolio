@@ -61,19 +61,19 @@ const Card = ({
         {cardClassName !== "max-w-xs" && (
           
           <div className="px-6 pb-4 flex flex-wrap items-center">
-            <div
-              className=" cursor-pointer font-bold py-2 px-4 rounded mr-2 flex-grow text-center"
+           
+              <a href={demoLink} target="_blank" rel="noopener noreferrer" className=" cursor-pointer font-bold py-2 px-4 rounded mr-2 flex-grow text-center"
               onMouseEnter={() => setHover(true)}
               onMouseLeave={() => setHover(false)}
               style={{
                 backgroundColor: hover ? "#6E7578" : "#0071A1",
                 color: hover ? "#fff" : "#fff",
-              }}
-            >
-              <a href={demoLink} target="_blank" rel="noopener noreferrer">
+              }}>
+              
                 Demo
+                
               </a>
-            </div>
+            
             <a
               href={sourceCodeLink}
               target="_blank"
