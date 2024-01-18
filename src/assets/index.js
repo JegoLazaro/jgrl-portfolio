@@ -41,7 +41,7 @@ import C_logo from "./skillLogos/C_logo.png";
 import java from "./skillLogos/java.png";
 import mui from "./skillLogos/mui.png";
 
-import cv from "./LAZARO_RESUME.pdf"
+import cv from "./LAZARO_RESUME_2024.pdf"
 
 import figma_cloud from "./skillLogos/figma_cloud.png"
 import nodejs_cloud from "./skillLogos/nodejs_cloud.png"
