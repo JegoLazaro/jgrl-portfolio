@@ -13,7 +13,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div id="home" className="bg-slate-200">
+    <div id="home" className="bg-slate-200 px-2">
       <div className="relative isolate">
         <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"

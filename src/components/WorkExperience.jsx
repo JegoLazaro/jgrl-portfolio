@@ -63,7 +63,7 @@ const ExperienceItem = ({ step, isMobile }) => {
     <div ref={containerRef} className="expText step-details min-h-[100px]">
       <div
         className={`text-slate-500 text-justify text-pretty ${
-          isMobile ? "text-[2.5lvw]" : "text-[1.5lvw]"
+          isMobile ? "text-[2.5lvw]" : "text-[2lvw]"
         }`}
       >
         {startTyping && (
@@ -220,7 +220,7 @@ const WorkExperience = () => {
                 <div className="xl:w-4/6 ">
                   <div className="flex items-start">
                     <div className="absolute top-0 xl:left-[35vw] md:left-10 left-4 h-full flex justify-center z-20">
-                      <div className="timeline absolute h-[112%] -top-10 w-20 md:w-34 bg-slate-200 z-30" />
+                      <div className="timeline absolute h-[106%] -top-10 w-20 md:w-34 bg-slate-200 z-30" />
                     </div>
                   </div>
 

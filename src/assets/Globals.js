@@ -39,7 +39,7 @@ const styles = {
     featureText:
       "font-semibold font-IBMPlex text-base minlg:text-3xl text-tertiary",
     featureCard:
-      "bg-white m-6 p-2 rounded-md flex justify-around items-center flex-col cursor-pointer w-40 h-40 minlg:w-80 minlg:h-80",
+      "bg-white m-6 p-2 rounded-xl flex justify-around items-center flex-col cursor-pointer w-40 h-40 minlg:w-80 minlg:h-80",
   };
   
   export default styles;

@@ -8,7 +8,7 @@ export const FeatureCard = ({ iconUrl, iconText, shadow_Color }) => {
 
   return (
     <CardTilt shadow_Color={shadow_Color}
-      className={`${styles.featureCard}  overflow-hidden transition-transform transform `}
+      className={`${styles.featureCard} overflow-hidden transition-transform transform `}
       
     >
       <img src={iconUrl} alt="icon" className={`${styles.featureImg}`} />
@@ -169,7 +169,7 @@ const SkillCards = () => {
   ];
 
   return (
-    <div className={`${styles.section} -mr-8  lg:-mt-22 md:-mt-20 sm:-mt-12`}>
+    <div className={`${styles.section}`}>
       <div className={`${styles.subSection} items-center justify-start mx-auto max-w-7xl flex-col text-center `}>
         <div className={styles.flexWrap}>
           {skillsData.map((skill, index) => (

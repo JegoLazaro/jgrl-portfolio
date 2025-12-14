@@ -2,8 +2,8 @@ import assets from "../../assets";
 import { Typewriter, Cursor } from "react-simple-typewriter";
 
 const AboutMeContainer = () => {
-  const aboutMe = "Software Engineer specializing in full-stack development with React.js, Next.js, and Python FastAPI. Proven experience in building scalable web applications and optimizing business processes through automation workflows (n8n, Zapier). Adept at Agile, remote-first collaboration to deliver high-quality, end-to-end solutions.";
-  
+  const aboutMe =
+    "Software Engineer specializing in full-stack development with React.js, Next.js, and Python FastAPI. Proven experience in building scalable web applications and optimizing business processes through automation workflows (n8n, Zapier). Adept at Agile, remote-first collaboration to deliver high-quality, end-to-end solutions.";
 
   return (
     <div>
@@ -20,31 +20,27 @@ const AboutMeContainer = () => {
             }}
           />
         </div>
-        
+
         <div className="flex flex-col lg:flex-row items-center justify-start mx-auto max-w-5xl py-10 sm:py-10 lg:py-2">
-        <div className="lg:w-1/2 fadeLeftMini">
+          <div className="lg:w-1/2 fadeLeftMini">
             <img
               className="img_mockup w-full"
               src={assets.mockup2}
               alt="Mockup"
             />
           </div>
-          <div className="lg:w-1/2 pl-12 sm:mr-4 fadeRightMini">
-            <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Hello, I'm Jego Lazaro!
+          <div className="lg:w-1/2 px-2 fadeRightMini">
+            <h1 className="text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
+              Hello, I'm Jego Lazaro!
             </h1>
             <h1
               className="text-xl pt-3 text-justify font-semibold tracking-wide sm:text-2xl"
               style={{
                 color: "#0071A1",
-                 textShadow: "1px 2px 3px #fff",
+                // textShadow: "1px 2px 3px #fff",
               }}
             >
-              <span
-                style={{
-                  marginLeft: 0,
-                }}
-              >
+              <span>
                 <Typewriter
                   words={[aboutMe]}
                   loop={true}
@@ -55,10 +51,8 @@ const AboutMeContainer = () => {
                   delaySpeed={7200}
                 />
               </span>
-             
             </h1>
           </div>
-          
         </div>
       </div>
     </div>
@@ -66,5 +60,3 @@ const AboutMeContainer = () => {
 };
 
 export default AboutMeContainer;
-
-
