@@ -26,7 +26,7 @@ const Projects = () => {
   //   ]
   return (
     <div id="projects" className="-mr-6">
-      <HeaderComp title={"Projects"} description={"Immersive digital experiences with React JS and React Native mobile apps. Elevating user engagement through innovative design and seamless functionality."} reverse/>
+      <HeaderComp title={"Personal Projects"} description={"Immersive digital experiences with React JS and React Native mobile apps. Elevating user engagement through innovative design and seamless functionality."} />
       <ProjectCards />
     </div>
   );

@@ -5,20 +5,16 @@ import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
 const HeroSection = () => {
   const [hover, setHover] = useState(false);
-  const [hoverDownload, setHoverDownload] = useState(false);
-
-  const [showCVModal, setShowCVModal] = useState(false);
-  // const handleCVClick = () => {
-  //   setShowCVModal(true);
-  // };
-
-  // const handleIOSModal = () => {
-  //   setShowCVModal(false);
-  // };
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/resume.pdf"; 
+    link.download = "LAZARO RESUME-2026.pdf";
+    link.click();
+  };
 
   return (
-    <div id="home">
-      <div className="relative isolate px-6 lg:px-8">
+    <div id="home" className="bg-slate-200">
+      <div className="relative isolate">
         <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
           aria-hidden="true"
@@ -40,28 +36,17 @@ const HeroSection = () => {
         </div>
         <div className="flex flex-col lg:flex-row items-center justify-start mx-auto max-w-5xl py-32 sm:py-36 lg:py-28">
           <div className={`lg:w-1/2 pr-8 fadeLeftMini`}>
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+            <h1 className="text-4xl font-thin tracking-tight text-gray-900 sm:text-5xl">
               Hello, My name is Jego Lazaro!
             </h1>
-            <h1
-              className="text-3xl pt-3 font-bold tracking-tight -mr-20  sm:text-4xl"
-              style={{
-                color: "#0071A1",
-                textShadow: "2px 2px 2px #fff",
-              }}
-            >
-              I am a 
-              <span
-                style={{
-                  marginLeft: 10,
-                }}
-              >
+            <h1 className="text-3xl pt-3 font-light tracking-tight -mr-20 text-black sm:text-4xl">
+              Skilled<span className="ml-5">
                 <Typewriter
                   words={[
-                    "<Frontend Developer",
-                    "<Mobile Developer",
-                    "<Software Engineer",
-                    "<Designer",
+                    "<Software Engineer ",
+                    "<Full-Stack Engineer ",
+                    "<Frontend Developer ",
+                    "<Backend Developer ",
                   ]}
                   loop={false}
                   cursor
@@ -72,30 +57,29 @@ const HeroSection = () => {
                 />
               </span>
             </h1>
-            <p className="mt-6 text-md font-semibold leading-8 text-gray-600">
+            {/* <p className="mt-6 text-md font-semibold leading-8 text-gray-600">
               🌐 Frontend Excellence: Translating visions into interactive &
               responsive web experiences.
-              </p>
-              <p className="mt-2 text-md font-semibold leading-8 text-gray-600">
-                📱 Mobile Magic: Building sleek and powerful mobile apps that
-                redefine user expectations.
-              </p>
-              <p className="mt-2 text-md font-semibold leading-8 text-gray-600">
-                💻 Software Wizardry: Crafting robust, scalable software
-                solutions that stand the test of time.
-              </p>
-              <p className="mt-2 text-md font-semibold leading-8 text-gray-600">
-                ✨ Design Elegance: Merging form and function to create visually
-                stunning and user-friendly interfaces.
-              </p>
-            
+            </p>
+            <p className="mt-2 text-md font-semibold leading-8 text-gray-600">
+              📱 Mobile Magic: Building sleek and powerful mobile apps that
+              redefine user expectations.
+            </p>
+            <p className="mt-2 text-md font-semibold leading-8 text-gray-600">
+              💻 Software Wizardry: Crafting robust, scalable software solutions
+              that stand the test of time.
+            </p>
+            <p className="mt-2 text-md font-semibold leading-8 text-gray-600">
+              ✨ Design Elegance: Merging form and function to create visually
+              stunning and user-friendly interfaces.
+            </p> */}
+
             <div className="cursor-pointer flex mt-10 items-start justify-start gap-x-6">
               <ScrollLink
                 to="skills"
                 className="rounded-md px-3.5 py-2.5 text-lg font-semibold text-white shadow-sm"
                 onMouseEnter={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}
-                
                 spy={true}
                 smooth={true}
                 offset={10}
@@ -107,15 +91,12 @@ const HeroSection = () => {
               >
                 Get to Know Me
               </ScrollLink>
-
-              <div className="rounded-md mb-5 px-3.5 py-2.5 text-lg font-semibold shadow-sm"  onMouseEnter={() => setHoverDownload(true)}
-              onMouseLeave={() => setHoverDownload(false)}
-              style={{
-                backgroundColor: hoverDownload ? "#4E93B0" : "#0071A1",
-                color: !hoverDownload ? "#fff" : "#fff",
-              }}>
-                <DownloadButton />
-              </div>
+              <button
+                className="rounded-md px-3.5 z-50 cursor-pointer py-2.5 text-lg font-semibold text-white shadow-sm bg-[#0071A1] hover:bg-[#4E93B0]"
+                onClick={handleDownload}
+              >
+                Download CV
+              </button>
             </div>
           </div>
           <div className="fadeRightMini lg:w-1/2">
@@ -132,22 +113,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-
-const DownloadButton = () => {
-  const handleDownload = () => {
-    const pdfPath = assets.cv;
-    const link = document.createElement("a");
-
-    link.href = pdfPath;
-
-    link.download = "LAZARO_RESUME.pdf";
-
-    document.body.appendChild(link);
-
-    link.click();
-
-    document.body.removeChild(link);
-  };
-
-  return <button onClick={handleDownload}>Download CV</button>;
-};

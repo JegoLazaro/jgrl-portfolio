@@ -82,7 +82,7 @@ const ProjectsCard = () => {
   const projectsToDisplay = activeTab === "website" ? websiteProjects : mobileProjects;
 
   return (
-    <div className="bg-white py-24 sm:py-1 sm:pb-20">
+    <div className="bg-slate-200 py-24 sm:py-1 sm:pb-20">
       <div className="text-lg font-medium text-center text-gray-500 border-b ">
         <ul className="flex flex-wrap -mb-px justify-center">
           <li className={`cursor-pointer mr-2 ${activeTab === "website" ? "text-cyan-900 border-b-2 border-cyan-800" : ""}`}>
@@ -104,7 +104,7 @@ const ProjectsCard = () => {
         </ul>
       </div>
 
-      <div className="flex flex-wrap justify-center items-center mx-auto max-w-7xl">
+      <div className="flex flex-wrap  justify-center items-center mx-auto max-w-7xl">
         {projectsToDisplay.map((project, index) => (
           <Card
             key={index}

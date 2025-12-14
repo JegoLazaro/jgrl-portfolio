@@ -6,20 +6,20 @@ import pic2 from "./pic2.png";
 import pic3 from "./pic3.png";
 import Logo_name from "./logo_name.png";
 
-import gofiber from "./gofiber.png"
-import la_parrilla from "./la_parrilla.png"
-import nft_showcase from "./nft_showcase.png"
+import gofiber from "./gofiber.png";
+import la_parrilla from "./la_parrilla.png";
+import nft_showcase from "./nft_showcase.png";
 
-import crypto_tracker from "./crypto_tracker.jpg"
-import movie_app from "./movie_app.jpg"
-import nft_marketplace from "./nft_marketplace.jpg"
+import crypto_tracker from "./crypto_tracker.jpg";
+import movie_app from "./movie_app.jpg";
+import nft_marketplace from "./nft_marketplace.jpg";
 
-import nft_ios_qr from "./ios_nft_app_qr.svg"
-import nft_android_qr from "./android_nft_app_qr.svg"
-import movie_ios_qr from "./ios_movie_app_qr.svg"
-import movie_android_qr from "./android_movie_app_qr.svg"
-import crytpo_ios_qr from "./ios_crypto_app_qr.svg"
-import crypto_android_qr from "./android_crypto_app_qr.svg"
+import nft_ios_qr from "./ios_nft_app_qr.svg";
+import nft_android_qr from "./android_nft_app_qr.svg";
+import movie_ios_qr from "./ios_movie_app_qr.svg";
+import movie_android_qr from "./android_movie_app_qr.svg";
+import crytpo_ios_qr from "./ios_crypto_app_qr.svg";
+import crypto_android_qr from "./android_crypto_app_qr.svg";
 
 import expo02 from "./skillLogos/expo02.png";
 import javascript from "./skillLogos/javascript.png";
@@ -41,20 +41,30 @@ import C_logo from "./skillLogos/C_logo.png";
 import java from "./skillLogos/java.png";
 import mui from "./skillLogos/mui.png";
 
-import cv from "./LAZARO_RESUME_2024.pdf"
+import cv from "./LAZARO RESUME-2026.pdf";
 
-import figma_cloud from "./skillLogos/figma_cloud.png"
-import nodejs_cloud from "./skillLogos/nodejs_cloud.png"
-import react_cloud from "./skillLogos/react_cloud.png"
-import tailwindcss_cloud from "./skillLogos/tailwindcss_cloud.png"
-import git_cloud from "./skillLogos/git_cloud.png"
+import figma_cloud from "./skillLogos/figma_cloud.png";
+import nodejs_cloud from "./skillLogos/nodejs_cloud.png";
+import react_cloud from "./skillLogos/react_cloud.png";
+import tailwindcss_cloud from "./skillLogos/tailwindcss_cloud.png";
+import git_cloud from "./skillLogos/git_cloud.png";
 
-import ExpoLogo from "./ExpoLogo.png"
-import FbLogo from "./FbLogo.png"
-import LinkedInLogo from "./LinkedInLogo.png"
-import GithubLogo from "./GithubLogo.png"
+import ExpoLogo from "./ExpoLogo.png";
+import FbLogo from "./FbLogo.png";
+import LinkedInLogo from "./LinkedInLogo.png";
+import GithubLogo from "./GithubLogo.png";
 
-import cwhq from "./cwhq.png"
+import cwhq from "./cwhq.png";
+import fastapi from "./skillLogos/fastapi.svg";
+import gsap from "./skillLogos/gsap.jpg";
+import mongodb from "./skillLogos/mongodb.svg";
+import mysql from "./skillLogos/mysql.png";
+import n8n from "./skillLogos/n8n.png";
+import nextjs from "./skillLogos/nextjs.svg";
+import postman from "./skillLogos/postman.png";
+import typescript from "./skillLogos/typecript.png";
+import vercel from "./skillLogos/vercel.jpg";
+import gcp from "./skillLogos/gcp.png";
 
 export default {
   Logo,
@@ -64,7 +74,6 @@ export default {
   pic2,
   pic3,
   Logo_name,
-
   github_logo,
   figma_logo,
   expo02,
@@ -84,26 +93,36 @@ export default {
   java,
   mui,
   gofiber,
-la_parrilla,
-nft_showcase,
-crypto_tracker,
-movie_app,
-nft_marketplace,
-nft_ios_qr,
-nft_android_qr,
-movie_ios_qr,
-movie_android_qr,
-crytpo_ios_qr,
-crypto_android_qr,
-cv,
-nodejs_cloud,
-react_cloud,
-tailwindcss_cloud,
-figma_cloud,
-git_cloud,
-ExpoLogo,
-FbLogo,
-LinkedInLogo,
-GithubLogo,
-cwhq
+  la_parrilla,
+  nft_showcase,
+  crypto_tracker,
+  movie_app,
+  nft_marketplace,
+  nft_ios_qr,
+  nft_android_qr,
+  movie_ios_qr,
+  movie_android_qr,
+  crytpo_ios_qr,
+  crypto_android_qr,
+  cv,
+  nodejs_cloud,
+  react_cloud,
+  tailwindcss_cloud,
+  figma_cloud,
+  git_cloud,
+  ExpoLogo,
+  FbLogo,
+  LinkedInLogo,
+  GithubLogo,
+  cwhq,
+  gcp,
+  fastapi,
+  gsap,
+  mongodb,
+  mysql,
+  n8n,
+  nextjs,
+  postman,
+  typescript,
+  vercel,
 };

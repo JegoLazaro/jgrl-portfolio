@@ -9,13 +9,15 @@ import Projects from "./components/Projects";
 import assets from "./assets";
 import { Analytics } from '@vercel/analytics/react';
 import HeaderComp from "./components/headerComp";
+import WorkExperience from "./components/WorkExperience";
 
 const App = () => {
   return (
-    <div className="flex-1 justify-center lg:-mr-4 -mr-4 ">
+    <div className="flex flex-col w-full bg-slate-400 justify-center lg:-mr-4 -mr-4 ">
       <Navbar />
       <HeroSection />
       <Skills />
+      <WorkExperience />
       <Projects />
       <AboutMe />
       <Contact />

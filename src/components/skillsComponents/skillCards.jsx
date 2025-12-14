@@ -1,22 +1,15 @@
 import React, { useState } from "react";
 import assets from "../../assets";
 import styles from "../../assets/Globals";
+import { CardTilt } from "./CardTilt";
 
 export const FeatureCard = ({ iconUrl, iconText, shadow_Color }) => {
   const [hover, setHover] = useState(false);
 
   return (
-    <div
-      className={`${styles.featureCard}  overflow-hidden transition-transform transform ${
-        hover ? "scale-110" : ""
-      }`}
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
-      style={{
-        boxShadow: hover
-          ? `1px 3px 20px 4px ${shadow_Color}`
-          : "0.5px 1px 2px #000",
-      }}
+    <CardTilt shadow_Color={shadow_Color}
+      className={`${styles.featureCard}  overflow-hidden transition-transform transform `}
+      
     >
       <img src={iconUrl} alt="icon" className={`${styles.featureImg}`} />
       <p className={`${styles.featureText}`}
@@ -31,7 +24,7 @@ export const FeatureCard = ({ iconUrl, iconText, shadow_Color }) => {
       >
         {iconText}
       </p>
-    </div>
+    </CardTilt>
   );
 };
 
@@ -63,13 +56,59 @@ const SkillCards = () => {
     },
     { iconUrl: assets.git, iconText: "Git", link: "", shadowColor: "#F05033" },
     {
-      iconUrl: assets.react,
-      iconText: "React Native",
-      link: "https://reactnative.dev/",
-      shadowColor: "#61DBFB",
+      iconUrl: assets.nextjs,
+      iconText: "Next JS",
+      link: "",
+      shadowColor: "#000",
     },
-
-    { iconUrl: assets.expo02, iconText: "Expo", link: "", shadowColor: "#000" },
+    {
+      iconUrl: assets.fastapi,
+      iconText: "FastAPI",
+      link: "",
+      shadowColor: "#06998b",
+    },
+    {
+      iconUrl: assets.mongodb,
+      iconText: "MongoDB",
+      link: "",
+      shadowColor: "#06998b",
+    },
+    {
+      iconUrl: assets.mysql,
+      iconText: "MySQL",
+      link: "",
+      shadowColor: "#156d90",
+    },
+    {
+      iconUrl: assets.n8n,
+      iconText: "n8n",
+      link: "",
+      shadowColor: "#ea4a71",
+    },
+    {
+      iconUrl: assets.postman,
+      iconText: "Postman",
+      link: "",
+      shadowColor: "#fd6c35",
+    },
+    {
+      iconUrl: assets.typescript,
+      iconText: "Typescript",
+      link: "",
+      shadowColor: "#2d78c7",
+    },
+    {
+      iconUrl: assets.vercel,
+      iconText: "Vercel",
+      link: "",
+      shadowColor: "#000",
+    },
+     {
+      iconUrl: assets.gcp,
+      iconText: "Google Cloud Platform",
+      link: "",
+      shadowColor: "#2d78c7",
+    },
     {
       iconUrl: assets.tailwind,
       iconText: "Tailwind CSS",
@@ -95,13 +134,6 @@ const SkillCards = () => {
       link: "",
       shadowColor: "#3270A0",
     },
-    ,
-    {
-      iconUrl: assets.react_bootstrap,
-      iconText: "React-Bootstrap",
-      link: "",
-      shadowColor: "#61DBFB",
-    },
     {
       iconUrl: assets.bootstrap,
       iconText: "Bootstrap",
@@ -115,12 +147,6 @@ const SkillCards = () => {
       shadowColor: "#00589C",
     },
     {
-      iconUrl: assets.android_studio,
-      iconText: "Java Anroid Studio",
-      link: "",
-      shadowColor: "#89BB52",
-    },
-    {
       iconUrl: assets.java,
       iconText: "Java",
       link: "",
@@ -132,6 +158,14 @@ const SkillCards = () => {
       link: "",
       shadowColor: "#00589C",
     },
+    {
+      iconUrl: assets.react,
+      iconText: "React Native",
+      link: "https://reactnative.dev/",
+      shadowColor: "#61DBFB",
+    },
+
+    { iconUrl: assets.expo02, iconText: "Expo", link: "", shadowColor: "#000" },
   ];
 
   return (

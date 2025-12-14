@@ -7,12 +7,13 @@ import assets from "../assets";
 const navigation = [
   { name: "Home", path: "home" },
   { name: "Skills", path: "skills" },
+  { name: "Experience", path: "experience" },
   { name: "Projects", path: "projects" },
   { name: "About Me", path: "about" },
-  { name: "Contact Me", path: "contact" }
+  { name: "Contact Me", path: "contact" },
 ];
 
-export default function Navbar() {
+ const Navbar = () => { 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const scrollToTop = () => {
@@ -20,10 +21,9 @@ export default function Navbar() {
   };
 
   return (
-    <div className="  ">
-      <header className="fixed  inset-x-0 top-0 z-50">
+      <header className="opacity-[85%] fixed inset-x-0 top-0 z-50">
         <nav
-          className=" bg-white shadow-md flex items-center justify-between p-3 lg:px-8"
+          className="bg-slate-400 shadow-md flex items-center justify-between p-3 lg:px-8"
           aria-label="Global"
         >
           <div className="flex lg:flex-1 flex-row">
@@ -32,11 +32,7 @@ export default function Navbar() {
               className="-m-1.5 p-1.5 cursor-pointer"
               onClick={scrollToTop}
             >
-              <img
-                className="h-8 w-auto"
-                src={assets.Logo_name}
-                alt=""
-              />
+              <img className="h-8 w-auto" src={assets.Logo_name} alt="" />
             </ScrollLink>
           </div>
           <div className="flex lg:hidden">
@@ -56,14 +52,15 @@ export default function Navbar() {
                 to={item.path}
                 spy={true}
                 smooth={true}
-                offset={10} 
+                offset={10}
                 duration={500}
-                className="text-md font-semibold text-cyan-800 hover:bg-cyan-700 rounded-xl hover:text-white px-10 py-2 cursor-pointer"
+                className="text-md font-semibold text-cyan-900 hover:bg-cyan-700 rounded-3xl hover:text-white px-10 py-2 cursor-pointer"
               >
                 {item.name}
               </ScrollLink>
             ))}
           </div>
+          <div className="flex-1"/>
         </nav>
         <Dialog
           as="div"
@@ -82,11 +79,7 @@ export default function Navbar() {
                   scrollToTop();
                 }}
               >
-                <img
-                  className="h-8 w-auto"
-                  src={assets.Logo_name}
-                  alt=""
-                />
+                <img className="h-8 w-auto" src={assets.Logo_name} alt="" />
               </ScrollLink>
               <button
                 type="button"
@@ -120,6 +113,7 @@ export default function Navbar() {
           </Dialog.Panel>
         </Dialog>
       </header>
-    </div>
   );
 }
+
+export default Navbar

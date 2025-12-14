@@ -1,18 +1,15 @@
-import React from "react";
-import SkillCards from "./skillsComponents/skillCards";
 import assets from "../assets";
 
-const HeaderComp = ({ title, description, reverse, isCloud }) => {
+const HeaderComp = ({ title, description, reverse, isCloud, clear }) => {
   return (
     <div
       id="skills"
-      className={` ${isCloud ? "-mr-10" : "-mr-4"} fadeTopMini py-20 sm:py-20 `}
-      style={{
-        backgroundColor: reverse ? "#0071A1" : "#fff",
-      }}
+      className={` ${
+        reverse ? "bg-slate-400" : "bg-slate-400"
+      } fadeTopMini py-20 sm:py-20 `}
     >
       {isCloud ? (
-        <div className=" items-center justify-center mx-auto max-w-6xl px-6 lg:px-8">
+        <div className=" items-center justify-center px-6 lg:px-8">
           <h2 className="text-center text-lg font-semibold leading-8 text-white">
             Powered by the best technologies
           </h2>
@@ -55,31 +52,46 @@ const HeaderComp = ({ title, description, reverse, isCloud }) => {
           </div>
         </div>
       ) : (
-        <div
-          className={`mx-auto max-w-7xl px-6 lg:px-8 flex ${
-            reverse ? " justify-center" : "justify-start"
-          }`}
-        >
-          <div className="max-w-2xl">
-            <h2
-              className={`text-3xl font-bold tracking-tight sm:text-4xl flex ${
-                reverse ? "justify-center" : "justify-start"
-              } `}
-              style={{
-                color: reverse ? "#fff0ff" : "#0071A1",
-              }}
+        <>
+          {clear ? (
+            <div
+              className="absolute -z-50 overflow-hidden blur-3xl sm:-top-50"
+              aria-hidden="true"
             >
-              {title}
-            </h2>
-            <p className="mt-2 mb-4 text-justify text-lg leading-8"
-              style={{
-                color: reverse ? "#00FFF0" : "#0071A1"
-              }}
-            >
-              {description}
-            </p>
+              <div
+                className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-45 sm:left-[calc(50%-32rem)] sm:w-[72.1875rem]"
+                style={{
+                  clipPath:
+                    "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+                }}
+              />
+            </div>
+          ) : null}
+
+          <div
+            className={`mx-auto max-w-7xl px-6 lg:px-8 flex ${
+              reverse ? " justify-center" : "justify-start"
+            }`}
+          >
+            <div className="max-w-2xl">
+              <h2
+                className={`text-3xl font-bold tracking-tight sm:text-4xl flex ${
+                  reverse ? "justify-center" : "justify-start selection:"
+                } `}
+                style={{
+                  color: reverse ? "#fff0ff" : "#0071A1",
+                }}
+              >
+                {title}
+              </h2>
+              <p
+                className="mt-2 mb-4 text-justify text-lg leading-8"
+              >
+                {description}
+              </p>
+            </div>
           </div>
-        </div>
+        </>
       )}
     </div>
   );

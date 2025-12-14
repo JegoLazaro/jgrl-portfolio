@@ -1,10 +1,8 @@
-import React, { useState } from "react";
 import assets from "../../assets";
 import { Typewriter, Cursor } from "react-simple-typewriter";
-import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
 const AboutMeContainer = () => {
-  const aboutMe = "A dedicated React JS and React Native developer. I earned my BS in Computer Science Degree from DLSU-Manila, specializing in Software Technology. Fueled by a love for innovation and creativity, I thrive on transforming ideas into seamless digital experiences. Let's embark on a journey to bring your projects to life!";
+  const aboutMe = "Software Engineer specializing in full-stack development with React.js, Next.js, and Python FastAPI. Proven experience in building scalable web applications and optimizing business processes through automation workflows (n8n, Zapier). Adept at Agile, remote-first collaboration to deliver high-quality, end-to-end solutions.";
   
 
   return (
@@ -49,7 +47,7 @@ const AboutMeContainer = () => {
               >
                 <Typewriter
                   words={[aboutMe]}
-                  loop={7}
+                  loop={true}
                   cursor
                   cursorStyle="|"
                   typeSpeed={70}
