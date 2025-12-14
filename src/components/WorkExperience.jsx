@@ -63,7 +63,7 @@ const ExperienceItem = ({ step, isMobile }) => {
     <div ref={containerRef} className="expText step-details min-h-[100px]">
       <div
         className={`text-slate-500 text-justify text-pretty ${
-          isMobile ? "text-[2.5lvw]" : "text-[2lvw]"
+          isMobile ? "text-[3.5lvw]" : "text-[2lvw]"
         }`}
       >
         {startTyping && (
@@ -198,7 +198,7 @@ const WorkExperience = () => {
                   <div className={`p-5 ${isMobile && "ml-12"} rounded-4xl`}>
                     <h1
                       className={`font-semibold text-shadow-sm text-shadow-white text-pretty ${
-                        isMobile ? "text-[2.5lvw]" : "text-[2lvw]"
+                        isMobile ? "text-[4.5lvw]" : "text-[2lvw]"
                       } uppercase`}
                     >
                       {step.title}
@@ -211,7 +211,7 @@ const WorkExperience = () => {
                       {step.role}
                     </h1>
                     <h1
-                      className={`font-semibold text-shadow-sm text-slate-400 text-shadow-white text-pretty text-[1.5lvw]`}
+                      className={`font-semibold text-shadow-sm text-slate-400 text-shadow-white text-pretty text-[2.5lvw]`}
                     >
                       {step.timeline}
                     </h1>
@@ -229,7 +229,7 @@ const WorkExperience = () => {
                       {index !== 3 && (
                         <div
                           className={`absolute w-[6px] ${
-                            isMobile ? "h-[770%]" : "h-[315%]"
+                            isMobile ? "h-[480%]" : "h-[315%]"
                           }  left-1/2 top-0 -translate-x-1/2 -z-10 bg-slate-700 `}
                         />
                       )}
