@@ -15,7 +15,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div id="home" className="bg-slate-200 px-2">
+    <section id="home" className="bg-slate-200 px-2">
       <div className="relative isolate">
         <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -72,7 +72,7 @@ const HeroSection = () => {
               </a>
               <Tooltip
                 anchorSelect="#github"
-                content="See my project in Github!"
+                content="See my projects in Github!"
               />
               <a
                 id="linkedin"
@@ -123,7 +123,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

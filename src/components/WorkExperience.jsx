@@ -52,6 +52,7 @@ const ExperienceItem = ({ step, isMobile }) => {
             end: "bottom 25%",
             toggleActions: "play none none reverse",
             onEnter: () => setStartTyping(true),
+            // onUpdate: () =>setStartTyping(false)
           },
         }
       );
@@ -167,7 +168,7 @@ const WorkExperience = () => {
   return (
     <section
       id="experience"
-      className="bg-slate-200 relative isolate my-10 py-40 w-full md:mt-40 mt-20 px-5 md:px-10 xl:px-0"
+      className="bg-slate-200 relative isolate my-10 py-40 w-full md:mt-40 mt-20 px-5 md:px-10"
     >
       <div
         className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -192,10 +193,10 @@ const WorkExperience = () => {
             {workExp.map((step, index) => (
               <div
                 key={step.title}
-                className={`flex ${isMobile ? "flex-col" : "flex-col-reverse"} xl:flex-row xl:gap-20 gap-10 justify-between`}
+                className={`flex ${isMobile ? "flex-col" : "flex-col-reverse"} md:flex-col xl:flex-row xl:gap-20 gap-10 justify-between`}
               >
                 <div className="timeline-step xl:w-2/6">
-                  <div className={`p-5 ${isMobile && "ml-12"} rounded-4xl`}>
+                  <div className={`p-5 ${isMobile && "ml-12"} md:ml-10 rounded-4xl`}>
                     <h1
                       className={`font-semibold text-shadow-sm text-shadow-white text-pretty ${
                         isMobile ? "text-[4.5lvw]" : "text-[2lvw]"
@@ -218,19 +219,19 @@ const WorkExperience = () => {
                   </div>
                 </div>
                 <div className="xl:w-4/6 ">
-                  <div className="flex items-start">
+                  {/* <div className="flex items-start">
                     <div className="absolute top-0 xl:left-[35vw] md:left-10 left-4 h-full flex justify-center z-20">
                       <div className="timeline absolute h-[106%] -top-10 w-20 md:w-34 bg-slate-200 z-30" />
                     </div>
-                  </div>
+                  </div> */}
 
                   <div className=" flex xl:gap-20 md:gap-10 gap-5 relative">
                     <div className="relative flex-none">
                       {index !== 3 && (
                         <div
                           className={`absolute w-[6px] ${
-                            isMobile ? "h-[480%]" : "h-[315%]"
-                          }  left-1/2 top-0 -translate-x-1/2 -z-10 bg-slate-700 `}
+                            isMobile ? "h-[480%]" : "h-[300%]"
+                          }  left-1/2 top-0 -translate-x-1/2 -z-10 bg-slate-400 `}
                         />
                       )}
                       <div className="z-10 rounded-md py-2 px-1 shadow-cyan-400 shadow-md flex justify-center items-center md:-translate-y-6 border-4 border-cyan-700 bg-[#57e3d7] overflow-hidden">

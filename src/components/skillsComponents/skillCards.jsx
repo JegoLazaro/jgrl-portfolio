@@ -170,7 +170,7 @@ const SkillCards = () => {
 
   return (
     <div className={`${styles.section}`}>
-      <div className={`${styles.subSection} items-center justify-start mx-auto max-w-7xl flex-col text-center `}>
+      <div className={`${styles.subSection} items-center z-50 justify-start mx-auto max-w-7xl flex-col text-center `}>
         <div className={styles.flexWrap}>
           {skillsData.map((skill, index) => (
             <a key={index} className="cursor-pointer">
