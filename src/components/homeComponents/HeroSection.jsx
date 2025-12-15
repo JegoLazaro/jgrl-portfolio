@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import assets from "../../assets";
-import { Typewriter, Cursor } from "react-simple-typewriter";
+import { Typewriter } from "react-simple-typewriter";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+import { CardTilt } from "../skillsComponents/CardTilt";
+import { Tooltip } from "react-tooltip";
 
 const HeroSection = () => {
   const [hover, setHover] = useState(false);
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/resume.pdf"; 
+    link.href = "/resume.pdf";
     link.download = "LAZARO RESUME-2026.pdf";
     link.click();
   };
@@ -40,7 +42,8 @@ const HeroSection = () => {
               Hello, My name is Jego Lazaro!
             </h1>
             <h1 className="text-3xl pt-3 font-light tracking-tight -mr-20 text-black sm:text-4xl">
-              Skilled<span className="ml-5">
+              Skilled
+              <span className="ml-5">
                 <Typewriter
                   words={[
                     "<Software Engineer ",
@@ -57,22 +60,34 @@ const HeroSection = () => {
                 />
               </span>
             </h1>
-            {/* <p className="mt-6 text-md font-semibold leading-8 text-gray-600">
-              🌐 Frontend Excellence: Translating visions into interactive &
-              responsive web experiences.
-            </p>
-            <p className="mt-2 text-md font-semibold leading-8 text-gray-600">
-              📱 Mobile Magic: Building sleek and powerful mobile apps that
-              redefine user expectations.
-            </p>
-            <p className="mt-2 text-md font-semibold leading-8 text-gray-600">
-              💻 Software Wizardry: Crafting robust, scalable software solutions
-              that stand the test of time.
-            </p>
-            <p className="mt-2 text-md font-semibold leading-8 text-gray-600">
-              ✨ Design Elegance: Merging form and function to create visually
-              stunning and user-friendly interfaces.
-            </p> */}
+            <div className="flex flex-row mt-5">
+              <a
+                id="github"
+                href="https://github.com/JegoLazaro/"
+                className="mr-2 px-1"
+              >
+                <CardTilt className={`rounded-xl`}>
+                  <img src={assets.GithubLogo} className="w-12" />
+                </CardTilt>
+              </a>
+              <Tooltip
+                anchorSelect="#github"
+                content="See my project in Github!"
+              />
+              <a
+                id="linkedin"
+                href="https://www.linkedin.com/in/jose-gabriel-lazaro-b842a8277/"
+                className="mr-2 px-1"
+              >
+                <CardTilt className={`rounded-xl`}>
+                  <img src={assets.LinkedInLogo} className="w-12" />
+                </CardTilt>
+              </a>
+              <Tooltip
+                anchorSelect="#linkedin"
+                content="View my LinkedIn Profile!"
+              />
+            </div>
 
             <div className="cursor-pointer flex mt-10 items-start justify-start gap-x-6">
               <ScrollLink

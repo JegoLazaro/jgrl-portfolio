@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import AboutMe from "./components/AboutMe";
 import Contact from "./components/ContactMe";
@@ -7,11 +7,27 @@ import Skills from "./components/Skills";
 import HeroSection from "./components/homeComponents/HeroSection";
 import Projects from "./components/Projects";
 import assets from "./assets";
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from "@vercel/analytics/react";
 import HeaderComp from "./components/headerComp";
 import WorkExperience from "./components/WorkExperience";
 
 const App = () => {
+  useEffect(() => {
+    if (process.env.NODE_ENV === "production") {
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "ultju1tp74");
+    }
+  }, []);
   return (
     <div className="relative w-screen min-h-screen overflow-x-hidden bg-slate-400 justify-center">
       <Navbar />
@@ -37,7 +53,10 @@ const App = () => {
             <a href="https://expo.dev/@jego01" className="mr-2 px-1">
               <img src={assets.ExpoLogo} className="w-6" />
             </a>
-            <a href="https://www.linkedin.com/in/jose-gabriel-lazaro-b842a8277/" className="mr-2 px-1">
+            <a
+              href="https://www.linkedin.com/in/jose-gabriel-lazaro-b842a8277/"
+              className="mr-2 px-1"
+            >
               <img src={assets.LinkedInLogo} className="w-7" />
             </a>
           </div>

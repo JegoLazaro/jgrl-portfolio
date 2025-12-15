@@ -1,33 +1,27 @@
-import { useState, useRef } from "react";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import { Switch } from "@headlessui/react";
-import "./forms.css";
-
-import emailjs from '@emailjs/browser';
+import React, { useState, useRef, useEffect } from "react";
+import { useForm, ValidationError } from "@formspree/react";
+import Swal from "sweetalert2";
 
 const Forms = () => {
-  const [agreed, setAgreed] = useState(false);
-  const [hoverDownload, setHoverDownload] = useState(false);
-
-  const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs.sendForm('service_9v91ywq', 'template_zix1wsq', form.current, 'zefYFrTnbQ92biUlo')
-      .then((result) => {
-          console.log(result.text);
-          alert("Message Sent Successfully, Thank You For Reaching Out!");
-      }, (error) => {
-          console.log(error.text);
+  const [state, handleSubmit] = useForm("xdkqvnre"); 
+  useEffect(() => {
+    if (state.succeeded) {
+      Swal.fire({
+        title: "Success!",
+        text: "Your message has been sent successfully. I'll be in touch soon!",
+        icon: "success",
+        confirmButtonText: "Awesome",
+        confirmButtonColor: "#156d90" 
+      }).then(() => {
+        window.location.reload()
       });
-      e.target.reset()
-  };
+    }
+  }, [state.succeeded]);
+
   return (
     <div className="isolate bg-white px-6 py-24 lg:py-32 md:py-14 -mb-10 sm:-mb-10 sm:py-0 sm:pb-20 lg:px-8">
       <form
-        ref={form}
-        onSubmit={sendEmail}
+        onSubmit={handleSubmit}
         className="mx-auto -mt-16 lg:-mt-28 max-w-xl sm:mt-20"
       >
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
@@ -48,6 +42,11 @@ const Forms = () => {
                 placeholder="First Name"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-400 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6"
               />
+              <ValidationError
+                prefix="FirstName"
+                field="first-name"
+                errors={state.errors}
+              />
             </div>
           </div>
           <div>
@@ -66,6 +65,11 @@ const Forms = () => {
                 autoComplete="family-name"
                 placeholder="Last Name"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-400 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6"
+              />
+              <ValidationError
+                prefix="LastName"
+                field="last-name"
+                errors={state.errors}
               />
             </div>
           </div>
@@ -87,6 +91,11 @@ const Forms = () => {
                 placeholder="Email Address"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-400 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6"
               />
+              <ValidationError
+                prefix="Email"
+                field="email"
+                errors={state.errors}
+              />
             </div>
           </div>
 
@@ -104,8 +113,13 @@ const Forms = () => {
                 name="subject"
                 id="subject"
                 autoComplete="subject"
-                placeholder="Subject"
+                placeholder="What do you want to talk about?"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-400 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6"
+              />
+              <ValidationError
+                prefix="Subject"
+                field="subject"
+                errors={state.errors}
               />
             </div>
           </div>
@@ -123,9 +137,14 @@ const Forms = () => {
                 name="message"
                 id="message"
                 rows={4}
-                placeholder="Let's Hear it Out!"
+                placeholder="Write me a message..."
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-400 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6"
                 defaultValue={""}
+              />
+              <ValidationError
+                prefix="Message"
+                field="message"
+                errors={state.errors}
               />
             </div>
           </div>
@@ -133,20 +152,15 @@ const Forms = () => {
         <div className="mt-10">
           <button
             type="submit"
-            className="block w-full rounded-md  px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600"
-            onMouseEnter={() => setHoverDownload(true)}
-            onMouseLeave={() => setHoverDownload(false)}
-            style={{
-              backgroundColor: hoverDownload ? "#4E93B0" : "#0071A1",
-              color: !hoverDownload ? "#fff" : "#fff",
-            }}
+            disabled={state.submitting}
+            className="block w-full rounded-md bg-cyan-700 hover:bg-cyan-800 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm "
           >
-            Let's talk
+            {state.submitting ? "Sending..." : "Let's talk"}
           </button>
         </div>
       </form>
     </div>
   );
-}
+};
 
-export default Forms
+export default Forms;
