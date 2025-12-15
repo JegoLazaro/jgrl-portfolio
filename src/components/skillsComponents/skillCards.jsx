@@ -165,7 +165,7 @@ const SkillCards = () => {
       shadowColor: "#61DBFB",
     },
 
-    { iconUrl: assets.expo02, iconText: "Expo", link: "", shadowColor: "#000" },
+    { iconUrl: assets.gsap, iconText: "GSAP", link: "", shadowColor: "#000" },
   ];
 
   return (

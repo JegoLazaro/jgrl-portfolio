@@ -65,8 +65,12 @@ import postman from "./skillLogos/postman.png";
 import typescript from "./skillLogos/typecript.png";
 import vercel from "./skillLogos/vercel.jpg";
 import gcp from "./skillLogos/gcp.png";
+import formspree_cloud from "./formspree_cloud.webp";
+import vercel_cloud from "./vercel_cloud.png";
 
 export default {
+  formspree_cloud,
+  vercel_cloud,
   Logo,
   mockup1,
   mockup2,
