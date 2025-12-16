@@ -1,29 +1,16 @@
-import React, { useState } from "react";
 import assets from "../../assets";
 import styles from "../../assets/Globals";
 import { CardTilt } from "./CardTilt";
 
 export const FeatureCard = ({ iconUrl, iconText, shadow_Color }) => {
-  const [hover, setHover] = useState(false);
 
   return (
-    <CardTilt shadow_Color={shadow_Color}
-      className={`${styles.featureCard} overflow-hidden transition-transform transform `}
-      
+    <CardTilt
+      shadow_Color={shadow_Color}
+      className={`${styles.featureCard} bg-slate-200 overflow-hidden transition-transform transform `}
     >
       <img src={iconUrl} alt="icon" className={`${styles.featureImg}`} />
-      <p className={`${styles.featureText}`}
-        onMouseEnter={() => setHover(true)}
-        onMouseLeave={() => setHover(false)}
-        style={{
-          color: hover
-            ?  `${shadow_Color}`
-            :  "#000",
-          textShadow: !hover? "none" :"1px 0px 0.5px 0px #000"
-        }}
-      >
-        {iconText}
-      </p>
+      <p className={`${styles.featureText}`}>{iconText}</p>
     </CardTilt>
   );
 };
@@ -103,7 +90,7 @@ const SkillCards = () => {
       link: "",
       shadowColor: "#000",
     },
-     {
+    {
       iconUrl: assets.gcp,
       iconText: "Google Cloud Platform",
       link: "",
@@ -165,12 +152,19 @@ const SkillCards = () => {
       shadowColor: "#61DBFB",
     },
 
-    { iconUrl: assets.gsap, iconText: "GSAP", link: "", shadowColor: "#000" },
+    {
+      iconUrl: assets.gsap,
+      iconText: "GSAP",
+      link: "",
+      shadowColor: "#08e449",
+    },
   ];
 
   return (
     <div className={`${styles.section}`}>
-      <div className={`${styles.subSection} items-center z-50 justify-start mx-auto max-w-7xl flex-col text-center `}>
+      <div
+        className={`${styles.subSection} items-center z-40 justify-start mx-auto max-w-7xl flex-col text-center `}
+      >
         <div className={styles.flexWrap}>
           {skillsData.map((skill, index) => (
             <a key={index} className="cursor-pointer">

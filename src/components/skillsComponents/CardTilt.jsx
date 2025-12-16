@@ -39,6 +39,10 @@ export const CardTilt = ({ children, className, shadow_Color }) => {
         boxShadow: hover
           ? `1px 3px 20px 4px ${shadow_Color}`
           : "0.5px 1px 2px #000",
+          color: hover
+            ?  `${shadow_Color}`
+            :  "#000",
+          textShadow: !hover? "none" :"1px 0px 0.5px 0px #000"
       }}
     >
       {children}

@@ -32,7 +32,7 @@ const navigation = [
               className="-m-1.5 p-1.5 cursor-pointer"
               onClick={scrollToTop}
             >
-              <img className="h-8 w-auto" src={assets.Logo_name} alt="" />
+              <img className="h-8 w-auto object-contain" src={assets.Logo_name} alt="" />
             </ScrollLink>
           </div>
           <div className="flex lg:hidden">
