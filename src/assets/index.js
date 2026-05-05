@@ -9,6 +9,7 @@ import Logo_name from "./logo_name.png";
 import gofiber from "./gofiber.png";
 import la_parrilla from "./la_parrilla.png";
 import nft_showcase from "./nft_showcase.png";
+import rag_arbiter from "./rag-arbiter.png";
 
 import crypto_tracker from "./crypto_tracker.jpg";
 import movie_app from "./movie_app.jpg";
@@ -129,4 +130,5 @@ export default {
   postman,
   typescript,
   vercel,
+  rag_arbiter
 };

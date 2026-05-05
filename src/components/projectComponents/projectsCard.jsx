@@ -6,6 +6,15 @@ const ProjectsCard = () => {
   const [activeTab, setActiveTab] = useState("website");
   const websiteProjects = [
     {
+      title: "RAG - Anime Arbiter",
+      imageSrc: assets.rag_arbiter,
+      demoLink: "https://rag-arbiter.vercel.app/",
+      sourceCodeLink: "https://github.com/JegoLazaro/RAG-arbiter",
+      ios_qr: "",
+      andorid_qr:"",
+      projectOV: "Full-stack Retrieval-Augmented Generation (RAG) web application built with Next.js, Gemini, and Pinecone to answer complex lore and battle questions across popular anime universes. It functions as an objective, AI-powered referee that pulls factual evidence directly from manga chapters and fandom wikis to ground its reasoning and prevent hallucinations during fan debates"
+    },
+    {
       title: "Crypto Watch HQ",
       imageSrc: assets.cwhq,
       demoLink: "https://cryptowatch-hq.vercel.app/",
